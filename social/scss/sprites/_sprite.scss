@@ -1,0 +1,360 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$emo1-name: 'emo1';
+$emo1-x: 122px;
+$emo1-y: 100px;
+$emo1-offset-x: -122px;
+$emo1-offset-y: -100px;
+$emo1-width: 13px;
+$emo1-height: 14px;
+$emo1-total-width: 249px;
+$emo1-total-height: 223px;
+$emo1-image: 'sprite.png';
+$emo1: (122px, 100px, -122px, -100px, 13px, 14px, 249px, 223px, 'sprite.png', 'emo1', );
+$emo2-name: 'emo2';
+$emo2-x: 144px;
+$emo2-y: 127px;
+$emo2-offset-x: -144px;
+$emo2-offset-y: -127px;
+$emo2-width: 13px;
+$emo2-height: 14px;
+$emo2-total-width: 249px;
+$emo2-total-height: 223px;
+$emo2-image: 'sprite.png';
+$emo2: (144px, 127px, -144px, -127px, 13px, 14px, 249px, 223px, 'sprite.png', 'emo2', );
+$emo3-name: 'emo3';
+$emo3-x: 122px;
+$emo3-y: 86px;
+$emo3-offset-x: -122px;
+$emo3-offset-y: -86px;
+$emo3-width: 13px;
+$emo3-height: 14px;
+$emo3-total-width: 249px;
+$emo3-total-height: 223px;
+$emo3-image: 'sprite.png';
+$emo3: (122px, 86px, -122px, -86px, 13px, 14px, 249px, 223px, 'sprite.png', 'emo3', );
+$emo4-name: 'emo4';
+$emo4-x: 122px;
+$emo4-y: 72px;
+$emo4-offset-x: -122px;
+$emo4-offset-y: -72px;
+$emo4-width: 13px;
+$emo4-height: 14px;
+$emo4-total-width: 249px;
+$emo4-total-height: 223px;
+$emo4-image: 'sprite.png';
+$emo4: (122px, 72px, -122px, -72px, 13px, 14px, 249px, 223px, 'sprite.png', 'emo4', );
+$emo5-name: 'emo5';
+$emo5-x: 185px;
+$emo5-y: 127px;
+$emo5-offset-x: -185px;
+$emo5-offset-y: -127px;
+$emo5-width: 13px;
+$emo5-height: 12px;
+$emo5-total-width: 249px;
+$emo5-total-height: 223px;
+$emo5-image: 'sprite.png';
+$emo5: (185px, 127px, -185px, -127px, 13px, 12px, 249px, 223px, 'sprite.png', 'emo5', );
+$emo6-name: 'emo6';
+$emo6-x: 171px;
+$emo6-y: 127px;
+$emo6-offset-x: -171px;
+$emo6-offset-y: -127px;
+$emo6-width: 14px;
+$emo6-height: 13px;
+$emo6-total-width: 249px;
+$emo6-total-height: 223px;
+$emo6-image: 'sprite.png';
+$emo6: (171px, 127px, -171px, -127px, 14px, 13px, 249px, 223px, 'sprite.png', 'emo6', );
+$emo7-name: 'emo7';
+$emo7-x: 157px;
+$emo7-y: 127px;
+$emo7-offset-x: -157px;
+$emo7-offset-y: -127px;
+$emo7-width: 14px;
+$emo7-height: 13px;
+$emo7-total-width: 249px;
+$emo7-total-height: 223px;
+$emo7-image: 'sprite.png';
+$emo7: (157px, 127px, -157px, -127px, 14px, 13px, 249px, 223px, 'sprite.png', 'emo7', );
+$forum-avatar1-name: 'forum_avatar1';
+$forum-avatar1-x: 194px;
+$forum-avatar1-y: 27px;
+$forum-avatar1-offset-x: -194px;
+$forum-avatar1-offset-y: -27px;
+$forum-avatar1-width: 50px;
+$forum-avatar1-height: 50px;
+$forum-avatar1-total-width: 249px;
+$forum-avatar1-total-height: 223px;
+$forum-avatar1-image: 'sprite.png';
+$forum-avatar1: (194px, 27px, -194px, -27px, 50px, 50px, 249px, 223px, 'sprite.png', 'forum_avatar1', );
+$forum-avatar2-name: 'forum_avatar2';
+$forum-avatar2-x: 144px;
+$forum-avatar2-y: 27px;
+$forum-avatar2-offset-x: -144px;
+$forum-avatar2-offset-y: -27px;
+$forum-avatar2-width: 50px;
+$forum-avatar2-height: 50px;
+$forum-avatar2-total-width: 249px;
+$forum-avatar2-total-height: 223px;
+$forum-avatar2-image: 'sprite.png';
+$forum-avatar2: (144px, 27px, -144px, -27px, 50px, 50px, 249px, 223px, 'sprite.png', 'forum_avatar2', );
+$forum-avatar3-name: 'forum_avatar3';
+$forum-avatar3-x: 144px;
+$forum-avatar3-y: 77px;
+$forum-avatar3-offset-x: -144px;
+$forum-avatar3-offset-y: -77px;
+$forum-avatar3-width: 50px;
+$forum-avatar3-height: 50px;
+$forum-avatar3-total-width: 249px;
+$forum-avatar3-total-height: 223px;
+$forum-avatar3-image: 'sprite.png';
+$forum-avatar3: (144px, 77px, -144px, -77px, 50px, 50px, 249px, 223px, 'sprite.png', 'forum_avatar3', );
+$forum-avatar4-name: 'forum_avatar4';
+$forum-avatar4-x: 194px;
+$forum-avatar4-y: 77px;
+$forum-avatar4-offset-x: -194px;
+$forum-avatar4-offset-y: -77px;
+$forum-avatar4-width: 50px;
+$forum-avatar4-height: 50px;
+$forum-avatar4-total-width: 249px;
+$forum-avatar4-total-height: 223px;
+$forum-avatar4-image: 'sprite.png';
+$forum-avatar4: (194px, 77px, -194px, -77px, 50px, 50px, 249px, 223px, 'sprite.png', 'forum_avatar4', );
+$forum-avatar5-name: 'forum_avatar5';
+$forum-avatar5-x: 72px;
+$forum-avatar5-y: 72px;
+$forum-avatar5-offset-x: -72px;
+$forum-avatar5-offset-y: -72px;
+$forum-avatar5-width: 50px;
+$forum-avatar5-height: 50px;
+$forum-avatar5-total-width: 249px;
+$forum-avatar5-total-height: 223px;
+$forum-avatar5-image: 'sprite.png';
+$forum-avatar5: (72px, 72px, -72px, -72px, 50px, 50px, 249px, 223px, 'sprite.png', 'forum_avatar5', );
+$friend1-name: 'friend1';
+$friend1-x: 42px;
+$friend1-y: 144px;
+$friend1-offset-x: -42px;
+$friend1-offset-y: -144px;
+$friend1-width: 42px;
+$friend1-height: 42px;
+$friend1-total-width: 249px;
+$friend1-total-height: 223px;
+$friend1-image: 'sprite.png';
+$friend1: (42px, 144px, -42px, -144px, 42px, 42px, 249px, 223px, 'sprite.png', 'friend1', );
+$friend2-name: 'friend2';
+$friend2-x: 126px;
+$friend2-y: 144px;
+$friend2-offset-x: -126px;
+$friend2-offset-y: -144px;
+$friend2-width: 42px;
+$friend2-height: 42px;
+$friend2-total-width: 249px;
+$friend2-total-height: 223px;
+$friend2-image: 'sprite.png';
+$friend2: (126px, 144px, -126px, -144px, 42px, 42px, 249px, 223px, 'sprite.png', 'friend2', );
+$friend3-name: 'friend3';
+$friend3-x: 0px;
+$friend3-y: 144px;
+$friend3-offset-x: 0px;
+$friend3-offset-y: -144px;
+$friend3-width: 42px;
+$friend3-height: 42px;
+$friend3-total-width: 249px;
+$friend3-total-height: 223px;
+$friend3-image: 'sprite.png';
+$friend3: (0px, 144px, 0px, -144px, 42px, 42px, 249px, 223px, 'sprite.png', 'friend3', );
+$friend4-name: 'friend4';
+$friend4-x: 168px;
+$friend4-y: 144px;
+$friend4-offset-x: -168px;
+$friend4-offset-y: -144px;
+$friend4-width: 42px;
+$friend4-height: 42px;
+$friend4-total-width: 249px;
+$friend4-total-height: 223px;
+$friend4-image: 'sprite.png';
+$friend4: (168px, 144px, -168px, -144px, 42px, 42px, 249px, 223px, 'sprite.png', 'friend4', );
+$friend5-name: 'friend5';
+$friend5-x: 84px;
+$friend5-y: 144px;
+$friend5-offset-x: -84px;
+$friend5-offset-y: -144px;
+$friend5-width: 42px;
+$friend5-height: 42px;
+$friend5-total-width: 249px;
+$friend5-total-height: 223px;
+$friend5-image: 'sprite.png';
+$friend5: (84px, 144px, -84px, -144px, 42px, 42px, 249px, 223px, 'sprite.png', 'friend5', );
+$logo-name: 'logo';
+$logo-x: 144px;
+$logo-y: 0px;
+$logo-offset-x: -144px;
+$logo-offset-y: 0px;
+$logo-width: 105px;
+$logo-height: 27px;
+$logo-total-width: 249px;
+$logo-total-height: 223px;
+$logo-image: 'sprite.png';
+$logo: (144px, 0px, -144px, 0px, 105px, 27px, 249px, 223px, 'sprite.png', 'logo', );
+$user-answer1-name: 'user_answer1';
+$user-answer1-x: 0px;
+$user-answer1-y: 72px;
+$user-answer1-offset-x: 0px;
+$user-answer1-offset-y: -72px;
+$user-answer1-width: 72px;
+$user-answer1-height: 72px;
+$user-answer1-total-width: 249px;
+$user-answer1-total-height: 223px;
+$user-answer1-image: 'sprite.png';
+$user-answer1: (0px, 72px, 0px, -72px, 72px, 72px, 249px, 223px, 'sprite.png', 'user_answer1', );
+$user-answer2-name: 'user_answer2';
+$user-answer2-x: 72px;
+$user-answer2-y: 0px;
+$user-answer2-offset-x: -72px;
+$user-answer2-offset-y: 0px;
+$user-answer2-width: 72px;
+$user-answer2-height: 72px;
+$user-answer2-total-width: 249px;
+$user-answer2-total-height: 223px;
+$user-answer2-image: 'sprite.png';
+$user-answer2: (72px, 0px, -72px, 0px, 72px, 72px, 249px, 223px, 'sprite.png', 'user_answer2', );
+$user-answer3-name: 'user_answer3';
+$user-answer3-x: 0px;
+$user-answer3-y: 0px;
+$user-answer3-offset-x: 0px;
+$user-answer3-offset-y: 0px;
+$user-answer3-width: 72px;
+$user-answer3-height: 72px;
+$user-answer3-total-width: 249px;
+$user-answer3-total-height: 223px;
+$user-answer3-image: 'sprite.png';
+$user-answer3: (0px, 0px, 0px, 0px, 72px, 72px, 249px, 223px, 'sprite.png', 'user_answer3', );
+$user-avatar-name: 'user_avatar';
+$user-avatar-x: 210px;
+$user-avatar-y: 144px;
+$user-avatar-offset-x: -210px;
+$user-avatar-offset-y: -144px;
+$user-avatar-width: 39px;
+$user-avatar-height: 39px;
+$user-avatar-total-width: 249px;
+$user-avatar-total-height: 223px;
+$user-avatar-image: 'sprite.png';
+$user-avatar: (210px, 144px, -210px, -144px, 39px, 39px, 249px, 223px, 'sprite.png', 'user_avatar', );
+$user-comment1-name: 'user_comment1';
+$user-comment1-x: 37px;
+$user-comment1-y: 186px;
+$user-comment1-offset-x: -37px;
+$user-comment1-offset-y: -186px;
+$user-comment1-width: 35px;
+$user-comment1-height: 35px;
+$user-comment1-total-width: 249px;
+$user-comment1-total-height: 223px;
+$user-comment1-image: 'sprite.png';
+$user-comment1: (37px, 186px, -37px, -186px, 35px, 35px, 249px, 223px, 'sprite.png', 'user_comment1', );
+$user-comment2-name: 'user_comment2';
+$user-comment2-x: 72px;
+$user-comment2-y: 186px;
+$user-comment2-offset-x: -72px;
+$user-comment2-offset-y: -186px;
+$user-comment2-width: 35px;
+$user-comment2-height: 35px;
+$user-comment2-total-width: 249px;
+$user-comment2-total-height: 223px;
+$user-comment2-image: 'sprite.png';
+$user-comment2: (72px, 186px, -72px, -186px, 35px, 35px, 249px, 223px, 'sprite.png', 'user_comment2', );
+$user-comment3-name: 'user_comment3';
+$user-comment3-x: 0px;
+$user-comment3-y: 186px;
+$user-comment3-offset-x: 0px;
+$user-comment3-offset-y: -186px;
+$user-comment3-width: 37px;
+$user-comment3-height: 37px;
+$user-comment3-total-width: 249px;
+$user-comment3-total-height: 223px;
+$user-comment3-image: 'sprite.png';
+$user-comment3: (0px, 186px, 0px, -186px, 37px, 37px, 249px, 223px, 'sprite.png', 'user_comment3', );
+$spritesheet-width: 249px;
+$spritesheet-height: 223px;
+$spritesheet-image: 'sprite.png';
+$spritesheet-sprites: ($emo1, $emo2, $emo3, $emo4, $emo5, $emo6, $emo7, $forum-avatar1, $forum-avatar2, $forum-avatar3, $forum-avatar4, $forum-avatar5, $friend1, $friend2, $friend3, $friend4, $friend5, $logo, $user-answer1, $user-answer2, $user-answer3, $user-avatar, $user-comment1, $user-comment2, $user-comment3, );
+$spritesheet: (249px, 223px, 'sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(../scss/sprites/#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

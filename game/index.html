@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script>
+		if (screen.width <= 1200) { 
+			document.write('<meta id="myviewport" name="viewport" content="width=1200, user-scalable=0">'); 
+		} else { 
+			document.write('<meta id="myviewport" name="viewport" content="width=device-width, user-scalable=0">'); 
+		}
+	</script>
+	<title>game</title>
+	<link href="dest/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="dest/style.css">
+</head>
+
+
+
+<body> 
+<header class="header">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-2 --nopadding">
+				<a href="/" title="homepage">
+					<img src="images/logo.png" alt="logo" class="logo__picture">
+				</a>
+			</div>
+			<div class="col-lg-10 --nopadding-right">
+				<div class="row">
+					<div class="col-lg-3 logo__text">REA<span class="another-text">LD</span>AY.KZ</div>
+					<div class="col-lg-9">
+						<div class=" profile">
+							<a href="#" class="profile__option">
+								<div class="icon icon--user profile__option--ico"><span class="profile__option--text">личный кабинет</span></div>
+							</a>
+							<a href="#" class="profile__option">
+								<div class="icon icon--message  profile__option--ico"><span class="profile__option--text">обратная связь</span></div>
+							</a>
+							<a href="#" class="profile__option">
+								<div class="icon icon--exit profile__option--ico"><span class="profile__option--text">выход</span></div>
+							</a>
+
+						</div>
+					</div>	
+
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+							<ul class="navigation clearfix ">
+								<li class="navigation__item">
+								<a href="#" class="navigation__item--text"><span class="another-text">1/</span>МИР LD</a>
+								</li>
+								<li class="navigation__item">
+								<a href="#" class="navigation__item--text"><span class="another-text">2/</span>РОЗЫГРЫШ</a>
+								</li>
+								<li class="navigation__item">
+								<a href="#" class="navigation__item--text"><span class="another-text">3/</span>КАТАЛОГ ПРИЗОВ</a>
+								</li>
+								<li class="navigation__item">
+								<a href="#" class="navigation__item--text"><span class="another-text">4/</span>НОВОСТИ</a>
+								</li>
+								<li class="navigation__item">
+								<a href="#" class="navigation__item--text"><span class="another-text">5/</span>ЛОВИ МОМЕНТ</a>
+								</li>
+								<li class="navigation__item">
+								<a href="#" class="navigation__item--text"><span class="another-text">6/</span>ОПРОС</a>
+								</li>								
+							</ul>
+					</div>			
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+							<ul class="navigation navigation--game clearfix ">
+								<li class="navigation__item navigation__item--game">
+								<a href="#" class="navigation__item--text">КАРТА ИГРЫ</a>
+								</li>
+								<li class="navigation__item navigation__item--game">
+								<a href="#" class="navigation__item--text">КЛУБНЫЙ МАГАЗИН</a>
+								</li>
+								<li class="navigation__item navigation__item--game">
+								<a href="#" class="navigation__item--text">МОИ ДОСТИЖЕНИЯ</a>
+								</li>
+								<li class="navigation__item navigation__item--game">
+								<a href="#" class="navigation__item--text">ОФИЦИАЛЬНЫЕ ПРАВИЛА</a>
+								</li>					
+							</ul>						
+					</div>			
+				</div>			
+			</div>
+
+		</div>
+	</div> 
+</header>
+
+<div class="content">
+	<div class="container-fluid content__background">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 content__main">
+					<div class="game__task">
+						<span class="game__task-choose">ВЫБЕРИ ОДНУ ИЗ ПАЧЕК - 
+						</span><br>
+						<span class="game__task-findout">УЗНАЙ, КАК ОБНОВИЛСЯ ТВОЙ
+						</span><br>
+						<span class="game__club">LD CLUB
+						</span>
+					</div>
+				<a href="gamepage.html" title="pack--blue" class="game__choose-pack game__choose-pack--blue" data-text='blue'>
+					<img src="images/blue_box.png" alt="pack--blue" >
+				</a>
+				<a href="gamepage.html" title="pack--silver" class="game__choose-pack game__choose-pack--silver" data-text='silver'>
+					<img src="images/silver_box.png" alt="pack--silver">
+				</a>
+				<a href="gamepage.html" title="pack--extra" class="game__choose-pack game__choose-pack--extra" data-text='extra'>
+					<img src="images/extra_box.png" alt="pack--extra">
+				</a>
+				<a href="gamepage.html" title="pack--lounge" class="game__choose-pack game__choose-pack--lounge" data-text='lounge'>
+					<img src="images/lounge_box.png" alt="pack--lounge">
+				</a>
+				<a href="gamepage.html" title="pack--gold" class="game__choose-pack game__choose-pack--gold" data-text='gold'>
+					<img src="images/gold_box.png" alt="pack--gold">
+				</a>
+				<a href="gamepage.html" title="pack--platinum" class="game__choose-pack game__choose-pack--platinum" data-text='platinum'>
+					<img src="images/platimun_box.png" alt="pack--platinum">
+				</a>
+				
+					<div class="choose-pack__type-text choose-pack__type-text--blue">LD CLUB EXTRA BLUE</div>
+					<div class="choose-pack__type-text choose-pack__type-text--silver">LD CLUB EXTRA SILVER</div>
+					<div class="choose-pack__type-text choose-pack__type-text--extra">LD CLUB EXTRA LOUNGE</div>
+					<div class="choose-pack__type-text choose-pack__type-text--lounge">LD CLUB LOUNGE</div>
+					<div class="choose-pack__type-text choose-pack__type-text--gold">LD CLUB GOLD</div>
+					<div class="choose-pack__type-text choose-pack__type-text--platinum">LD CLUB PLATINUM</div>
+
+					<div class="choose-pack__type-border choose-pack__type-border--blue"></div>
+					<div class="choose-pack__type-border choose-pack__type-border--silver"></div>
+					<div class="choose-pack__type-border choose-pack__type-border--extra"></div>
+					<div class="choose-pack__type-border choose-pack__type-border--lounge"></div>
+					<div class="choose-pack__type-border choose-pack__type-border--gold"></div>
+					<div class="choose-pack__type-border choose-pack__type-border--platinum"></div>
+
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+	
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 warning">Веб-сайт предназначен для определенного круга лиц: совершеннолетних потребителей табачных изделий, прошедших регистрацию.
+			</div>
+			<div class="col-lg-4">
+				<img src="images/sign.png" alt="sign" class="sign__picture">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<img src="images/warning.jpg" alt="warning" class="qq">
+			</div>
+		</div>
+	</div>	
+</footer>
+		
+
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>

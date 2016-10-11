@@ -1,0 +1,43 @@
+$bg_color:#f7f7f7;
+$header_bg:#252525;
+$user_activity_color:#79a6be;
+$section_title_color:#3d8eb9;
+$user_name_color:#3575bd;
+$header_icon_color:#c4c4c4;
+$header_user_icon_color:#717171;
+$border_color: #e8e6e7;
+$data_color:#a1a1a1; 
+$tab_color:#c1c1c1;
+$posts_name_color:#5d91ca;
+$posts_color:#575656;
+$section_left_titles:#3b3b3b;
+$hover_color:#5d91ca;
+$white:#fff;
+$footer_nav_col:#c5c5c5;
+$page_color:#a1a1a1;
+$category_circle_color:#99ddde;
+$topic_post_text:#575656;
+$moderator:#b7b7b7;
+$gif:#a8a8a8;
+$button:#e8e6e7;
+$button_bg:#2c82c9;
+$lisi_title:#0d8eb9;
+$report_color:#a2a2a2;
+
+@mixin main_text ($size, $color) {
+  font-family: 'Open Sans', sans-serif;
+  font-size: $size;
+  color:$color;
+}
+
+@mixin flex-center () {
+	display: flex;
+	align-items:center;
+}
+
+@mixin center () {
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform:translate(-50%, -50%);
+}
