@@ -332,25 +332,7 @@ Main content
 		vertical-align: middle;
 	}
 
-	// &:nth-of-type(1) {
-	// 	background-image: url(../images/book1.jpg);
-	// 	background-size: cover;
-	// }
 
-	// &:nth-of-type(2) {
-	// 	background-image: url(../images/book2.jpg);
-	// 	background-size: cover;
-	// }
-
-	// &:nth-of-type(3) {
-	// 	background-image: url(../images/book4.jpg);
-	// 	background-size: cover;
-	// }
-
-	// &:nth-of-type(4) {
-	// 	background-image: url(../images/book3.jpg);
-	// 	background-size: cover;	
-	// }
 
 	h2 {
 		font-family: 'appleberry';
@@ -434,6 +416,19 @@ Main content
 		}
 	}
 }
+
+.cd-item:hover .cd-item-bg1,
+.cd-item:hover .cd-item-bg2,
+.cd-item:hover .cd-item-bg3,
+.cd-item:hover .cd-item-bg4 {
+	opacity: 1;
+}
+
+.cd-item:hover h2 {
+	background-color: white;
+
+}
+
 .cd-item-bg1, .cd-item-bg2, .cd-item-bg3, .cd-item-bg4 {
 	position: absolute;
     z-index: -1;
@@ -446,6 +441,7 @@ Main content
     width: 100%;
     height: 100%;
 }
+
 
 .cd-item-bg1 {
 	background-image: url(../images/book1.jpg);
@@ -828,3 +824,4 @@ Javascript disabled
 .my_work:hover {
 	text-decoration: underline;
 }
+

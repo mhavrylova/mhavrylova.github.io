@@ -428,6 +428,15 @@ Main content
           -o-transform: translateX(400px);
           transform: translateX(400px); } }
 
+.cd-item:hover .cd-item-bg1,
+.cd-item:hover .cd-item-bg2,
+.cd-item:hover .cd-item-bg3,
+.cd-item:hover .cd-item-bg4 {
+  opacity: 1; }
+
+.cd-item:hover h2 {
+  background-color: white; }
+
 .cd-item-bg1, .cd-item-bg2, .cd-item-bg3, .cd-item-bg4 {
   position: absolute;
   z-index: -1;
