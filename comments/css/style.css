@@ -334,6 +334,7 @@ a, a:hover, a:active, a:visited, a:focus {
     align-items: center;
     padding: 0; }
     .comment-head__menu--item {
+      user-select: none;
       float: left;
       color: rgba(255, 255, 255, 0.5);
       font-size: 8px;
@@ -407,7 +408,8 @@ a, a:hover, a:active, a:visited, a:focus {
         font-size: 8px;
         display: flex;
         align-items: center;
-        margin-left: 21px; }
+        margin-left: 21px;
+        user-select: none; }
         .content-comment__activity--like-heart {
           background-color: inherit;
           border: none;
@@ -444,6 +446,7 @@ a, a:hover, a:active, a:visited, a:focus {
       background-size: 12px;
       outline: none; }
     .content-commenting__submit {
+      user-select: none;
       border: none;
       background-color: #ec5e2e;
       border-radius: 20px;
