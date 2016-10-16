@@ -253,9 +253,6 @@ a, a:hover, a:active, a:visited, a:focus {
 				border: 1px solid white;
 				border-radius: 20px;
 				font-family: 'Montserrat Bold';				
-			}
-			&:active {
-				background-color: inherit;
 			}	
 		}
 	}
@@ -344,10 +341,7 @@ a, a:hover, a:active, a:visited, a:focus {
 					}
 					&-count {
 
-					}
-				&:active {
-					background-color: inherit;
-				}			
+					}			
 			}
 		}	
 	}
@@ -399,10 +393,7 @@ a, a:hover, a:active, a:visited, a:focus {
 							    border-top-color: $activity_info;															
 							}
 						}	
-					}
-			&:active {
-				background-color: inherit;
-			}			
+					}			
 		}
 	}
 }

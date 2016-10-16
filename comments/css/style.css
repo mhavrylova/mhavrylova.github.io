@@ -347,8 +347,6 @@ a, a:hover, a:active, a:visited, a:focus {
         border: 1px solid white;
         border-radius: 20px;
         font-family: 'Montserrat Bold'; }
-      .comment-head__menu--item:active {
-        background-color: inherit; }
 
 .content_wrap {
   width: 1024px;
@@ -425,8 +423,6 @@ a, a:hover, a:active, a:visited, a:focus {
             display: inline-block; }
           .content-comment__activity--like-heart:hover:before {
             color: #ec5e2e; }
-        .content-comment__activity--like:active {
-          background-color: inherit; }
   .content-commenting {
     display: flex;
     justify-content: space-between;
@@ -486,8 +482,6 @@ a, a:hover, a:active, a:visited, a:focus {
           .content-commenting__submit:hover .content-commenting__submit--arrow::before {
             border-right-color: #7f7f7f;
             border-top-color: #7f7f7f; }
-      .content-commenting__submit:active {
-        background-color: inherit; }
 
 .loading {
   color: #ccc;
