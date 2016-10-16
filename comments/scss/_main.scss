@@ -239,7 +239,6 @@ a, a:hover, a:active, a:visited, a:focus {
 		align-items:center;
 		padding: 0;
 		&--item {
-			user-select: none;
 			float: left;
 			color: rgba(255,255,255,0.5);
 			font-size: 8px;
@@ -255,6 +254,9 @@ a, a:hover, a:active, a:visited, a:focus {
 				border-radius: 20px;
 				font-family: 'Montserrat Bold';				
 			}
+			&:active {
+				user-select: none;
+			}	
 		}
 	}
 }
@@ -325,8 +327,7 @@ a, a:hover, a:active, a:visited, a:focus {
 				font-size: 8px;
 				display: flex;
     			align-items: center;
-    			margin-left: 21px;
-    			user-select: none;      											
+    			margin-left: 21px;     											
 					&-heart {
 					background-color: inherit;
 					border: none;
@@ -344,6 +345,9 @@ a, a:hover, a:active, a:visited, a:focus {
 					&-count {
 
 					}
+				&:active {
+				user-select: none;
+				}			
 			}
 		}	
 	}
@@ -370,7 +374,6 @@ a, a:hover, a:active, a:visited, a:focus {
 		}
 
 		&__submit {
-			user-select: none;
 			border: none;
 			background-color: $colored;
 			border-radius: 20px;
@@ -396,7 +399,10 @@ a, a:hover, a:active, a:visited, a:focus {
 							    border-top-color: $activity_info;															
 							}
 						}	
-					}			
+					}
+			&:active {
+				user-select: none;
+			}			
 		}
 	}
 }

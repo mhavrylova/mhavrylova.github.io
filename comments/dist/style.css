@@ -420,10 +420,6 @@ a, a:hover, a:active, a:visited, a:focus {
             align-items: center;
     padding: 0; }
     .comment-head__menu--item {
-      -webkit-user-select: none;
-         -moz-user-select: none;
-          -ms-user-select: none;
-              user-select: none;
       float: left;
       color: rgba(255, 255, 255, 0.5);
       font-size: 8px;
@@ -437,6 +433,11 @@ a, a:hover, a:active, a:visited, a:focus {
         border: 1px solid white;
         border-radius: 20px;
         font-family: 'Montserrat Bold'; }
+      .comment-head__menu--item:active {
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none; }
 
 .content_wrap {
   width: 1024px;
@@ -539,11 +540,7 @@ a, a:hover, a:active, a:visited, a:focus {
         -webkit-align-items: center;
             -ms-flex-align: center;
                 align-items: center;
-        margin-left: 21px;
-        -webkit-user-select: none;
-           -moz-user-select: none;
-            -ms-user-select: none;
-                user-select: none; }
+        margin-left: 21px; }
         .content-comment__activity--like-heart {
           background-color: inherit;
           border: none;
@@ -562,6 +559,11 @@ a, a:hover, a:active, a:visited, a:focus {
             display: inline-block; }
           .content-comment__activity--like-heart:hover:before {
             color: #ec5e2e; }
+        .content-comment__activity--like:active {
+          -webkit-user-select: none;
+             -moz-user-select: none;
+              -ms-user-select: none;
+                  user-select: none; }
   .content-commenting {
     display: -webkit-box;
     display: -webkit-flex;
@@ -593,10 +595,6 @@ a, a:hover, a:active, a:visited, a:focus {
               background-size: 12px;
       outline: none; }
     .content-commenting__submit {
-      -webkit-user-select: none;
-         -moz-user-select: none;
-          -ms-user-select: none;
-              user-select: none;
       border: none;
       background-color: #ec5e2e;
       border-radius: 20px;
@@ -645,6 +643,11 @@ a, a:hover, a:active, a:visited, a:focus {
           .content-commenting__submit:hover .content-commenting__submit--arrow::before {
             border-right-color: #7f7f7f;
             border-top-color: #7f7f7f; }
+      .content-commenting__submit:active {
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none; }
 
 .loading {
   color: #ccc;
