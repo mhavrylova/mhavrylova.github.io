@@ -348,7 +348,7 @@ a, a:hover, a:active, a:visited, a:focus {
         border-radius: 20px;
         font-family: 'Montserrat Bold'; }
       .comment-head__menu--item:active {
-        outline: none; }
+        background-color: inherit; }
 
 .content_wrap {
   width: 1024px;
@@ -426,7 +426,7 @@ a, a:hover, a:active, a:visited, a:focus {
           .content-comment__activity--like-heart:hover:before {
             color: #ec5e2e; }
         .content-comment__activity--like:active {
-          outline: none; }
+          background-color: inherit; }
   .content-commenting {
     display: flex;
     justify-content: space-between;
@@ -487,7 +487,7 @@ a, a:hover, a:active, a:visited, a:focus {
             border-right-color: #7f7f7f;
             border-top-color: #7f7f7f; }
       .content-commenting__submit:active {
-        outline: none; }
+        background-color: inherit; }
 
 .loading {
   color: #ccc;
