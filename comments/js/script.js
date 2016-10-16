@@ -18,7 +18,7 @@ if (!formValidation(commentElement.value)) {
 commentElement.setAttribute("style", 'background : #ffd9d9');
 return false;
 } else {
-commentElement.setAttribute("style", 'background : none');
+commentElement.setAttribute("style", 'background-image : url(images/clip.png)');
 }
 
 var userBox = document.createElement('div');
