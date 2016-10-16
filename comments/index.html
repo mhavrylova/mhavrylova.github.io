@@ -52,9 +52,9 @@
 <div class="comment-head">
 	<span class="comment-head__count">23 comments</span>
 	<ul class="comment-head__menu">
-		<li class="comment-head__menu--item">Best</li>
-		<li class="comment-head__menu--item">Newest</li>
-		<li class="comment-head__menu--item">Oldest</li>		
+		<li class="comment-head__menu--item" id="best_search">Best</li>
+		<li class="comment-head__menu--item" id="newest_search">Newest</li>
+		<li class="comment-head__menu--item" id="oldest_search">Oldest</li>		
 	</ul>	
 </div>
 </div>
@@ -64,7 +64,7 @@
 <div id="comment-zone">
 	<div class="content-comment">
 		<div class="user-box"> 
-			<a href="#"><img src="images/user1.png" alt="user1" class="content-comment__avatar"></a>
+			<a href="#"><img src="images/user1.png" alt="user1" class="content-comment__avatar"><img src="images/user1_sm.png" alt="user1" class="content-comment__avatar--small"></a>
 			<div class="content-comment__text">			
 				<div class="content-comment__text--head">
 					<a href="#" class="content-comment__text--name">Mike Taylor</a>
@@ -82,7 +82,7 @@
 	</div>
 	<div class="content-comment">
 		<div class="user-box"> 
-			<a href="#"><img src="images/user2.png" alt="user2" class="content-comment__avatar"></a>
+			<a href="#"><img src="images/user2.png" alt="user2" class="content-comment__avatar"><img src="images/user2_sm.png" alt="user1" class="content-comment__avatar--small"></a>
 			<div class="content-comment__text">
 				<div class="content-comment__text--head">
 					<a href="#" class="content-comment__text--name">Sophia Anderson</a>
@@ -100,7 +100,7 @@
 	</div>
 	<div class="content-comment">
 		<div class="user-box"> 
-			<a href="#"><img src="images/user3.png" alt="user3" class="content-comment__avatar"></a>
+			<a href="#"><img src="images/user3.png" alt="user3" class="content-comment__avatar"><img src="images/user4_sm.png" alt="user1" class="content-comment__avatar--small"></a>
 			<div class="content-comment__text">
 				<div class="content-comment__text--head">
 					<a href="#" class="content-comment__text--name">Charlie Harris</a>
@@ -121,10 +121,10 @@
 	<div class="content-commenting">
 		<a href="#" class="user_main-box"><img src="images/user.png" alt="user" class="content-comment__avatar"></a>	
 		<form  class="flex-box" action="">		
-			<input type="text" placeholder="Write something..." class="content-commenting__textfield">
-			<button type="submit" class="content-commenting__submit">
+			<input type="text" placeholder="Write something..." class="content-commenting__textfield" id="commenting_field">
+			<button type="submit" class="content-commenting__submit" id="commenting_submit">
 				<span class="content-commenting__submit--arrow"></span>
-				Submit
+				<span  class="content-commenting__submit--text">Submit</span>
 			</button>	
 		</form>
 	</div>	

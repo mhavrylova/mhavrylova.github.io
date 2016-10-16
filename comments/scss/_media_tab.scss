@@ -110,12 +110,12 @@
 		&__textfield {
 			height: 55px;
 			border-radius: 45px;
-			width: 400px;
+			width: 100%;
 			font-size: 13px;
 			background-position-y: 15px;
 			background-position-x: 24px;
     		background-size: 16px;
-    		margin-right: 18px;
+    		margin-right: 20px;
     		padding-left: 60px;
 		}
 		&__submit {
@@ -162,12 +162,4 @@
 		}
 	}
 
-	.user-box {
-		width: 100%;
-	}
-
-	.flex-box {
-		width: 100%;
-		justify-content: space-between;
-	}
 }

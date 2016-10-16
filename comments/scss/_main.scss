@@ -283,6 +283,9 @@ a, a:hover, a:active, a:visited, a:focus {
 		&__avatar {
 		    height: 40px;
 		    width: 40px;
+		    &--small {
+		    	display: none;
+		    }
 		}
 		&__text {
 			width: 620px;			
@@ -360,7 +363,8 @@ a, a:hover, a:active, a:visited, a:focus {
 			background-repeat: no-repeat;
 		    background-position-x: 17px;
 		    background-position-y: 11px;
-		    background-size: 12px;		
+		    background-size: 12px;
+		    outline: none;		
 		}
 
 		&__submit {
@@ -374,7 +378,8 @@ a, a:hover, a:active, a:visited, a:focus {
 			font-size: 8px;
 			font-family: 'Montserrat Bold';
 			height: 40px;
-			box-shadow: 0px 10px 30px 0 rgba(0, 0, 0, 0.2);					
+			box-shadow: 0px 10px 30px 0 rgba(0, 0, 0, 0.2);	
+		    outline: none;								
 				&--arrow {
 					margin-right: 10px;	
 					@include arrow(16px, $white, $colored);			
