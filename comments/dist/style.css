@@ -434,10 +434,7 @@ a, a:hover, a:active, a:visited, a:focus {
         border-radius: 20px;
         font-family: 'Montserrat Bold'; }
       .comment-head__menu--item:active {
-        -webkit-user-select: none;
-           -moz-user-select: none;
-            -ms-user-select: none;
-                user-select: none; }
+        outline: none; }
 
 .content_wrap {
   width: 1024px;
@@ -560,10 +557,7 @@ a, a:hover, a:active, a:visited, a:focus {
           .content-comment__activity--like-heart:hover:before {
             color: #ec5e2e; }
         .content-comment__activity--like:active {
-          -webkit-user-select: none;
-             -moz-user-select: none;
-              -ms-user-select: none;
-                  user-select: none; }
+          outline: none; }
   .content-commenting {
     display: -webkit-box;
     display: -webkit-flex;
@@ -644,10 +638,7 @@ a, a:hover, a:active, a:visited, a:focus {
             border-right-color: #7f7f7f;
             border-top-color: #7f7f7f; }
       .content-commenting__submit:active {
-        -webkit-user-select: none;
-           -moz-user-select: none;
-            -ms-user-select: none;
-                user-select: none; }
+        outline: none; }
 
 .loading {
   color: #ccc;

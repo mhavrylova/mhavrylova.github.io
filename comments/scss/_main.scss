@@ -255,7 +255,7 @@ a, a:hover, a:active, a:visited, a:focus {
 				font-family: 'Montserrat Bold';				
 			}
 			&:active {
-				user-select: none;
+				outline: none;
 			}	
 		}
 	}
@@ -346,7 +346,7 @@ a, a:hover, a:active, a:visited, a:focus {
 
 					}
 				&:active {
-				user-select: none;
+				outline: none;
 				}			
 			}
 		}	
@@ -401,7 +401,7 @@ a, a:hover, a:active, a:visited, a:focus {
 						}	
 					}
 			&:active {
-				user-select: none;
+				outline: none;
 			}			
 		}
 	}
