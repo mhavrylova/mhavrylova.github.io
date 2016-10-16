@@ -1,0 +1,173 @@
+@media (min-width: 768px) and (max-width: 1023px) {
+	.head {
+	    height: 64px;
+	}
+
+	.header-menu__note-comment {
+		display: block;		
+	}
+
+	.header-menu__arrow-left, .header-menu__note, .header-menu__arrow-corner {
+		display: inline-block;
+	}
+
+	.header-menu__logo img {
+		height: 22px;
+		width: auto;
+	}
+	
+	.header-personal {
+		&__font {
+    		font-size: 23px;
+		}
+		&__magnifier {
+			margin-left: 31px;		
+		    width: 22px;
+		    height: 22px;
+		    &:after {
+		    content: '';
+		    left: 95%;
+		    top: 95%;
+			}
+		}
+		&__user-img {
+			width: 25px;
+			height: 25px;
+			margin-left: 31px;
+		}
+	}
+
+	.comment-h {
+	    height: 220px;
+	}
+
+	.comment-head {
+			&__count {
+			    font-size: 40px;
+			}
+			&__menu {
+				margin-top: 25px;
+					&--item {
+						font-size: 12px;
+						padding: 10px 36px;
+						margin-left: 0;
+							&:last-child {
+							padding: 10px 36px;			
+							}
+					}
+			}
+	}
+
+
+	.content {
+	    padding: 0 40px;
+		    &-comment{
+			    margin-top: 38px;
+			    padding-bottom: 23px;
+					&:first-child {
+					    margin-top: 58px;
+					}
+					&__avatar {
+					    height: 57px;
+					    width: 57px;
+					}
+					&__text {
+						font-size: 15px;
+						padding-top: 4px;
+						width: 100%;
+						&--text {
+						    margin-top: 10px;
+						    line-height: 22px;
+						    width: 68%;
+    						letter-spacing: -0.5px;
+						}
+					}
+					&__activity{
+						padding-top: 0;
+							&--like {
+					    	font-size: 10px;
+						    	&-heart:before {
+						    		font-size: 14px;
+						    		margin-right: 5px;
+						    	}
+							}
+							&--time {
+					    	font-size: 10px;
+					    	margin-right: 12px;					    	
+						    	&:before {
+						    		font-size: 17px;
+						    	}				
+							}
+					}
+				a .content-comment__avatar {
+					margin-right: 32px;
+				}
+			}
+	}
+
+	.content-commenting {
+		margin-top: 40px;
+		&__textfield {
+			height: 55px;
+			border-radius: 45px;
+			width: 400px;
+			font-size: 13px;
+			background-position-y: 15px;
+			background-position-x: 24px;
+    		background-size: 16px;
+    		margin-right: 18px;
+    		padding-left: 60px;
+		}
+		&__submit {
+			height: 55px;	
+			border-radius: 45px;
+			font-size: 13px;
+			padding: 10px 50px;
+			&--arrow {
+				width: 20px;
+				margin-right: 14px;	
+					&:before {
+						bottom: -8px;
+						width: 15px;
+    					height: 15px;
+					}
+			}					
+		}
+		.content-comment__avatar {
+			margin-right: 32px;
+		}
+	}
+
+	.loading {
+		font-size: 12px;
+		margin-top: 40px;
+	}	
+
+	.foot {
+	 	height: 100px;
+	 	margin-top: 55px;
+	}
+
+	.footer {
+		justify-content: center;
+			&-menu {
+				display: none;
+			}
+		&-social__icon {
+			display: none;
+		}
+		&-social__copyright {
+			margin: 0;
+			font-size: 10px;
+		}
+	}
+
+	.user-box {
+		width: 100%;
+	}
+
+	.flex-box {
+		width: 100%;
+		justify-content: space-between;
+	}
+}

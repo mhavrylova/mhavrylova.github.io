@@ -1,0 +1,108 @@
+@media (max-width: 767px) {
+	.logo {
+		display: none;
+	}
+
+	.header-personal {
+		display: none;
+	}
+
+	.header-menu {
+		width: 100%;
+		justify-content:space-between;
+	}
+
+	.header-menu__arrow-left,
+	.header-menu__note-comment, 
+	.header-menu__note, 
+	.header-menu__arrow-corner {
+		display: inline-block;
+		margin: 0;
+	}
+
+	.header-menu .header-personal__font {
+		display: inline-block;
+		font-size: 23px;
+	}
+
+	.head {
+	    height: 55px;
+	}
+	
+	.comment-h {
+	    height: 128px;
+	}
+
+
+
+	.comment-head {
+		padding: 0;
+			&__count {
+			    font-size: 18px;
+			    margin-top: 25px;
+			}
+			&__menu {
+			    margin-top: 25px;
+					&--item {
+						font-size: 10px;
+						padding: 10px 32px;
+						margin-left: 0;
+							&:last-child {
+							padding: 10px 32px;			
+							}
+					}
+			}
+	}
+
+
+	.content {
+		    padding: 0 40px;
+			    &-comment{
+				    margin-top: 38px;
+				    padding-bottom: 23px;
+						&:first-child {
+						    margin-top: 58px;
+						}
+						&__avatar {
+						    height: 57px;
+						    width: 57px;
+						}
+						&__text {
+							font-size: 15px;
+							padding-top: 4px;
+							width: 100%;
+							&--text {
+							    margin-top: 10px;
+							    line-height: 22px;
+							    width: 68%;
+	    						letter-spacing: -0.5px;
+							}
+						}
+						&__activity{
+							padding-top: 0;
+								&--like {
+						    	font-size: 10px;
+							    	&-heart:before {
+							    		font-size: 14px;
+							    		margin-right: 5px;
+							    	}
+								}
+								&--time {
+						    	font-size: 10px;
+						    	margin-right: 12px;					    	
+							    	&:before {
+							    		font-size: 17px;
+							    	}				
+								}
+						}
+					a .content-comment__avatar {
+						margin-right: 32px;
+					}
+				}
+		}
+
+
+
+
+
+} //phone

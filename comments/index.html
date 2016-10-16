@@ -25,15 +25,17 @@
 		<a href="#" class="header-menu__note-comment">
 			<span class="header-menu__note-comment--center"></span>	
 		</a>
+		<a href="#" class="header-personal__font">Aa
+		</a>
 		<a href="#" class="header-menu__note">
 			<span class="header-menu__note--center"></span>		
 		</a>
-		<a href="#" class="header-menu__arrow-corner">	
+		<a href="#" class="header-menu__arrow-corner">
 		</a>				
 	</div>
 	<a href="index.html"  class="header-menu__logo"><img src="images/logo.png" alt="logo" class="logo"></a>
 	<div class="header-personal">
-		<a href="#" class="header-personal__font">Aa		
+		<a href="#" class="header-personal__font">Aa
 		</a>
 		<a href="#" class="header-personal__magnifier">		
 		</a>
@@ -63,55 +65,61 @@
 	<div class="content-comment">
 		<div class="user-box"> 
 			<a href="#"><img src="images/user1.png" alt="user1" class="content-comment__avatar"></a>
-			<div class="content-comment__text">
-				<a href="#" class="content-comment__text--name">Mike Taylor</a>
+			<div class="content-comment__text">			
+				<div class="content-comment__text--head">
+					<a href="#" class="content-comment__text--name">Mike Taylor</a>
+					<div class="content-comment__activity">
+						<span class="content-comment__activity--time">Apr 3, 1:22pm</span>
+						<span class="content-comment__activity--like">
+							<span class="content-comment__activity--like-heart"  data-count="1" onclick="likesCount(this)"></span>
+							<span class="content-comment__activity--like-count" id="comment_like_1">12</span>
+						</span>
+					</div>
+				</div>
 				<p class="content-comment__text--text">Such a massive change in such a short time is extremely unusual.</p>	
 			</div>
-		</div>
-		<div class="content-comment__activity">
-			<span class="content-comment__activity--time">Apr3, 1:22pm</span>
-			<span class="content-comment__activity--like">
-				<span class="content-comment__activity--like-heart"  data-count="1" onclick="likesCount(this)"></span>
-				<span class="content-comment__activity--like-count" id="comment_like_1">12</span>
-			</span>
 		</div>
 	</div>
 	<div class="content-comment">
 		<div class="user-box"> 
 			<a href="#"><img src="images/user2.png" alt="user2" class="content-comment__avatar"></a>
 			<div class="content-comment__text">
-				<a href="#" class="content-comment__text--name">Sophia Anderson</a>
+				<div class="content-comment__text--head">
+					<a href="#" class="content-comment__text--name">Sophia Anderson</a>
+					<div class="content-comment__activity">
+						<span class="content-comment__activity--time">Apr 3, 5:04pm</span>
+						<span class="content-comment__activity--like">
+							<span class="content-comment__activity--like-heart"  data-count="2" onclick="likesCount(this)"></span>
+							<span class="content-comment__activity--like-count" id="comment_like_2">8</span>
+						</span>
+					</div>
+				</div>
 				<p class="content-comment__text--text">Loss of Arctic sea ice is just one of the many changes that are accelerating it.</p>	
 			</div>
-		</div>
-		<div class="content-comment__activity">
-			<span class="content-comment__activity--time">Apr3, 5:04pm</span>
-			<span class="content-comment__activity--like">
-				<span class="content-comment__activity--like-heart"  data-count="2" onclick="likesCount(this)"></span>
-				<span class="content-comment__activity--like-count" id="comment_like_2">8</span>
-			</span>
 		</div>
 	</div>
 	<div class="content-comment">
 		<div class="user-box"> 
 			<a href="#"><img src="images/user3.png" alt="user3" class="content-comment__avatar"></a>
 			<div class="content-comment__text">
-				<a href="#" class="content-comment__text--name">Charlie Harris</a>
+				<div class="content-comment__text--head">
+					<a href="#" class="content-comment__text--name">Charlie Harris</a>
+					<div class="content-comment__activity">
+						<span class="content-comment__activity--time">Apr 3, 10:34am</span>
+						<span class="content-comment__activity--like">
+							<span class="content-comment__activity--like-heart"  data-count="3" onclick="likesCount(this)"></span>
+							<span class="content-comment__activity--like-count" id="comment_like_3">5</span>
+						</span>
+					</div>
+				</div>				
 				<p class="content-comment__text--text">Perhaps they had the same thing in the early 20th century</p>	
 			</div>
-		</div>
-		<div class="content-comment__activity">
-			<span class="content-comment__activity--time">Apr3, 10:34am</span>
-			<span class="content-comment__activity--like">
-				<span class="content-comment__activity--like-heart"  data-count="3" onclick="likesCount(this)"></span>
-				<span class="content-comment__activity--like-count" id="comment_like_3">5</span>
-			</span>
 		</div>
 	</div>	
 </div>
 	<p class="loading">loading comments...</p>
 	<div class="content-commenting">
-		<a href="#" class="user-box"><img src="images/user.png" alt="user" class="content-comment__avatar"></a>	
+		<a href="#" class="user_main-box"><img src="images/user.png" alt="user" class="content-comment__avatar"></a>	
 		<form  class="flex-box" action="">		
 			<input type="text" placeholder="Write something..." class="content-commenting__textfield">
 			<button type="submit" class="content-commenting__submit">
@@ -132,7 +140,7 @@
 	<div class="footer-social">
 		<a href="#" class="footer-social__icon footer-social__icon--fb"></a>
 		<a href="#" class="footer-social__icon footer-social__icon footer-social__icon--tw"></a>
-		<a href="#" class="footer-social__icon footer-social__icon footer-social__icon--in"></a>		
+		<a href="#" class="footer-social__icon footer-social__icon footer-social__icon--in"></a>
 		<span class="footer-social__copyright">© 2015 All rights reserved.</span>		
 	</div>
 </div>

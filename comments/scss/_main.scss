@@ -149,7 +149,9 @@ a, a:hover, a:active, a:visited, a:focus {
 				}
 				display: none;				
 			}
-
+		.header-personal__font {
+			display: none;
+		}
 	}
 	&-personal {
 		display: flex;
@@ -283,6 +285,7 @@ a, a:hover, a:active, a:visited, a:focus {
 		    width: 40px;
 		}
 		&__text {
+			width: 620px;			
 			display: flex;
 			flex-direction:column;
 			font-size: 10.5px;
@@ -292,13 +295,17 @@ a, a:hover, a:active, a:visited, a:focus {
 			}
 			&--text {
 				margin-bottom: 0;
-    			margin-top: 11px;							
+    			margin-top: 10px;							
+			}
+			&--head {
+				display: flex;
+				justify-content:space-between;
 			}
 		}
 		&__activity {
 		    display: flex;
 		     align-self: flex-start;
-		     padding-top: 3px;
+		     padding-top: 0;
 			&--time {
 				color: $activity_info;
 				font-size: 8px;
@@ -395,9 +402,17 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 
-.user-box, .flex-box {
+.user-box {
 	display: flex;
-}	
+}
+
+.user_main-box {
+	display: flex;
+}
+
+.flex-box {
+	display: flex;
+}		
 
 .foot {
  	height: 72px;
