@@ -361,6 +361,7 @@ a, a:hover, a:active, a:visited, a:focus {
 			padding-left: 44px;
 			background: url(../images/clip.png);
 			background-repeat: no-repeat;
+			background-position: 17px;
 		    background-position-x: 17px;
 		    background-position-y: 11px;
 		    background-size: 12px;
@@ -373,16 +374,19 @@ a, a:hover, a:active, a:visited, a:focus {
 			border-radius: 20px;
 			color: $white;
 			padding:10px 37px;
-			display: flex;
+			display: flex;		    
+			display: -moz-box;	
 			align-items:center;
 			font-size: 8px;
 			font-family: 'Montserrat Bold';
 			height: 40px;
 			box-shadow: 0px 10px 30px 0 rgba(0, 0, 0, 0.2);	
-		    outline: none;								
+		    outline: none;
+							
 				&--arrow {
 					margin-right: 10px;	
-					@include arrow(16px, $white, $colored);			
+					@include arrow(16px, $white, $colored);	
+					vertical-align: middle;		
 				}
 					&:hover {
 						color: $activity_info;
