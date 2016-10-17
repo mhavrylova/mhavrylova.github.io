@@ -1,10 +1,10 @@
 "use strict";
 
 
-document.getElementById("commenting_submit").addEventListener("click", addComment, false);
-document.getElementById("best_search").addEventListener("click", sortByLikes, false);
-document.getElementById("oldest_search").addEventListener("click", sortByDateOld, false);
-document.getElementById("newest_search").addEventListener("click", sortByDateNew, false);
+document.getElementById("commenting_submit").addEventListener("click", addComment);
+document.getElementById("best_search").addEventListener("click", sortByLikes);
+document.getElementById("oldest_search").addEventListener("click", sortByDateOld);
+document.getElementById("newest_search").addEventListener("click", sortByDateNew);
 
 function addComment(e) {
 e.preventDefault();
@@ -19,7 +19,7 @@ commentElement.setAttribute("style", 'background : #ffd9d9');
 return false;
 } else {
 commentElement.setAttribute("style", 'background-image : url(images/clip.png)');
-}
+} //form validation
 
 var userBox = document.createElement('div');
 userBox.className = 'user-box';
@@ -71,7 +71,7 @@ contentCommentActivityLike.className = 'content-comment__activity--like';
 //1.2.1.2.2.1
 var contentCommentActivityLikeHeart = document.createElement('span');
 contentCommentActivityLikeHeart.className = 'content-comment__activity--like-heart';
-contentCommentActivityLikeHeart.addEventListener('click', likesCount, false);
+contentCommentActivityLikeHeart.addEventListener('click', likesCount);
 contentCommentActivityLikeHeart.setAttribute('data-count', (lastComment.length + 1).toString());
 //1.2.1.2.2.2
 var contentCommentActivityLikeCount = document.createElement('span');

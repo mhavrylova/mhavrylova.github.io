@@ -669,7 +669,10 @@ a, a:hover, a:active, a:visited, a:focus {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 48px; }
+  margin-top: 48px;
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
 
 .footer {
   -webkit-box-align: center;
@@ -720,6 +723,16 @@ a, a:hover, a:active, a:visited, a:focus {
     font-family: 'Montserrat Bold'; }
   .footer a:hover {
     color: #ec5e2e; }
+
+body {
+  height: 100%; }
+
+html {
+  position: relative;
+  min-height: 100%; }
+
+#container {
+  padding-bottom: 148px; }
 
 @media (max-width: 1023px) {
   .header, .comment-head, .content_wrap, .footer {
