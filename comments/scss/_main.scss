@@ -9,6 +9,19 @@ a, a:hover, a:active, a:visited, a:focus {
 	text-decoration: none;
 }
 
+body {
+	height: 100%;
+}
+
+html { 
+	position:relative; 
+	min-height:100%;
+}
+
+.container {
+	padding-bottom: 148px;
+}
+
 .clearfix:after {
 	content: '';
 	display: table;
@@ -35,7 +48,7 @@ a, a:hover, a:active, a:visited, a:focus {
 	&-menu {
 		display: flex;
 		align-items:center;
-		&__but {
+		&__buttons {
 			&:hover .header-menu__button {
 			background-color: $activity_info;
 			}
@@ -243,13 +256,19 @@ a, a:hover, a:active, a:visited, a:focus {
 			margin-left: 10px;
 			cursor: pointer;
 			&:last-child {
-			padding: 8px 17px;				
+			padding: 8px 17px;
+				&:hover, &:focus {
+					padding: 7px 16px;
+					outline: none;					
+				}				
 			}			
-			&:hover {
+			&:hover, &:focus {
 				color: $white;
 				border: 1px solid white;
+				padding: 7px 25px;				
 				border-radius: 20px;
-				font-family: 'Montserrat Bold';				
+				font-family: 'Montserrat Bold';
+				outline: none;			
 			}	
 		}
 	}
@@ -386,12 +405,16 @@ a, a:hover, a:active, a:visited, a:focus {
 					vertical-align: middle;		
 				}
 					&:hover {
-						color: $activity_info;
+						background-color: rgba(249,99,49,0.8);
+						box-shadow: none;
+						color: $white;
 							 .content-commenting__submit--arrow {
-							background-color: $activity_info;
-							&::before {
-								border-right-color: $activity_info;
-							    border-top-color: $activity_info;															
+							background-color: $white;
+							&:before {
+								border-right-color: $white;
+							    border-top-color: $white;	
+								border-left-color: rgba(249,99,49,0);
+							 	border-bottom-color: rgba(249,99,49,0);							    														
 							}
 						}	
 					}			
@@ -485,13 +508,3 @@ a, a:hover, a:active, a:visited, a:focus {
  	}
 }
 
-body {
- height: 100%;
-}
-html { 
- position:relative; 
- min-height:100%;
-}
-#container {
- padding-bottom: 148px;
-}

@@ -52,7 +52,13 @@
 						padding: 10px 36px;
 						margin-left: 0;
 							&:last-child {
-							padding: 10px 36px;			
+							padding: 10px 36px;	
+								&:hover, &:focus {
+									padding: 9px 35px;	
+								}	
+							}
+							&:hover, &:focus {
+								padding: 9px 35px;
 							}
 					}
 			}

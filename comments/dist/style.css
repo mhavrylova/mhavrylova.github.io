@@ -40,6 +40,16 @@ a, a:hover, a:active, a:visited, a:focus {
   color: inherit;
   text-decoration: none; }
 
+body {
+  height: 100%; }
+
+html {
+  position: relative;
+  min-height: 100%; }
+
+.container {
+  padding-bottom: 148px; }
+
 .clearfix:after {
   content: '';
   display: table;
@@ -81,7 +91,7 @@ a, a:hover, a:active, a:visited, a:focus {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
-    .header-menu__but:hover .header-menu__button {
+    .header-menu__buttons:hover .header-menu__button {
       background-color: #7f7f7f; }
     .header-menu__button {
       background-color: #fff;
@@ -428,11 +438,16 @@ a, a:hover, a:active, a:visited, a:focus {
       cursor: pointer; }
       .comment-head__menu--item:last-child {
         padding: 8px 17px; }
-      .comment-head__menu--item:hover {
+        .comment-head__menu--item:last-child:hover, .comment-head__menu--item:last-child:focus {
+          padding: 7px 16px;
+          outline: none; }
+      .comment-head__menu--item:hover, .comment-head__menu--item:focus {
         color: #fff;
         border: 1px solid white;
+        padding: 7px 25px;
         border-radius: 20px;
-        font-family: 'Montserrat Bold'; }
+        font-family: 'Montserrat Bold';
+        outline: none; }
 
 .content_wrap {
   width: 1024px;
@@ -630,12 +645,17 @@ a, a:hover, a:active, a:visited, a:focus {
           border-left-color: #ec5e2e;
           border-bottom-color: #ec5e2e; }
       .content-commenting__submit:hover {
-        color: #7f7f7f; }
+        background-color: rgba(249, 99, 49, 0.8);
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        color: #fff; }
         .content-commenting__submit:hover .content-commenting__submit--arrow {
-          background-color: #7f7f7f; }
-          .content-commenting__submit:hover .content-commenting__submit--arrow::before {
-            border-right-color: #7f7f7f;
-            border-top-color: #7f7f7f; }
+          background-color: #fff; }
+          .content-commenting__submit:hover .content-commenting__submit--arrow:before {
+            border-right-color: #fff;
+            border-top-color: #fff;
+            border-left-color: rgba(249, 99, 49, 0);
+            border-bottom-color: rgba(249, 99, 49, 0); }
 
 .loading {
   color: #ccc;
@@ -724,22 +744,12 @@ a, a:hover, a:active, a:visited, a:focus {
   .footer a:hover {
     color: #ec5e2e; }
 
-body {
-  height: 100%; }
-
-html {
-  position: relative;
-  min-height: 100%; }
-
-#container {
-  padding-bottom: 148px; }
-
 @media (max-width: 1023px) {
   .header, .comment-head, .content_wrap, .footer {
     width: 100%; }
   .header {
     padding: 0 16px; }
-  .header-menu__but, .header-menu__text, .header-personal__note {
+  .header-menu__buttons, .header-menu__text, .header-personal__note {
     display: none; }
   .comment-head {
     -webkit-box-orient: vertical;
@@ -796,6 +806,10 @@ html {
       margin-left: 0; }
       .comment-head__menu--item:last-child {
         padding: 10px 36px; }
+        .comment-head__menu--item:last-child:hover, .comment-head__menu--item:last-child:focus {
+          padding: 9px 35px; }
+      .comment-head__menu--item:hover, .comment-head__menu--item:focus {
+        padding: 9px 35px; }
   .content {
     padding: 0 40px; }
     .content-comment {
@@ -912,6 +926,10 @@ html {
         margin-left: 0; }
         .comment-head__menu--item:last-child {
           padding: 10px 32px; }
+          .comment-head__menu--item:last-child:hover, .comment-head__menu--item:last-child:focus {
+            padding: 9px 31px; }
+        .comment-head__menu--item:hover, .comment-head__menu--item:focus {
+          padding: 9px 31px; }
   .content {
     padding: 0 17px; }
     .content-comment {
@@ -978,6 +996,8 @@ html {
               box-shadow: none;
       color: #f96331;
       padding: 0; }
+      .content-commenting__submit:hover {
+        background-color: #fff; }
       .content-commenting__submit--arrow {
         width: 18px;
         margin-right: 14px;
@@ -989,6 +1009,18 @@ html {
           border-color: #f96331;
           border-left-color: #fff;
           border-bottom-color: #fff; }
+      .content-commenting__submit:hover {
+        background-color: #fff;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        color: #7f7f7f; }
+        .content-commenting__submit:hover .content-commenting__submit--arrow {
+          background-color: #7f7f7f; }
+          .content-commenting__submit:hover .content-commenting__submit--arrow::before {
+            border-right-color: #7f7f7f;
+            border-top-color: #7f7f7f;
+            border-left-color: #fff;
+            border-bottom-color: #fff; }
       .content-commenting__submit--text {
         display: none; }
     .content-commenting .user_main-box {

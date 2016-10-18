@@ -46,7 +46,13 @@
 						padding: 10px 32px;
 						margin-left: 0;
 							&:last-child {
-							padding: 10px 32px;			
+							padding: 10px 32px;
+								&:hover, &:focus {
+									padding: 9px 31px;
+								}					
+							}
+							&:hover, &:focus {
+								padding: 9px 31px;
 							}
 					}
 			}
@@ -135,7 +141,9 @@
 			box-shadow: none;
 			color: $nav_bg;
 			padding: 0;
-
+			&:hover {
+				background-color: $white;
+			}
 			&--arrow {
 				width: 18px;
 				margin-right: 14px;
@@ -147,8 +155,22 @@
     					border-color: $nav_bg;
     					border-left-color: $white;
     					border-bottom-color: $white;
-					}
+					}			
 			}
+					&:hover {
+						background-color: $white;
+						box-shadow: none;
+						color: $activity_info;
+							 .content-commenting__submit--arrow {
+							background-color: $activity_info;
+							&::before {
+								border-right-color: $activity_info;
+							    border-top-color: $activity_info;	
+								border-left-color: $white;
+							 	border-bottom-color: $white;								    														
+							}
+						}	
+					}
 			&--text {
 				display: none;
 			}					

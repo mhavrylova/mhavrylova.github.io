@@ -15,7 +15,7 @@ comment = document.createElement('div');
 comment.className = 'content-comment';
 
 if (!formValidation(commentElement.value)) {
-commentElement.setAttribute("style", 'background : #ffd9d9');
+commentElement.setAttribute("style", 'background-image : url(images/clip.png); background-color : #ffd9d9');
 return false;
 } else {
 commentElement.setAttribute("style", 'background-image : url(images/clip.png)');
