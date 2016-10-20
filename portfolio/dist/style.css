@@ -888,7 +888,7 @@ Javascript disabled
           justify-content: space-between; }
 
 .laptop_pic--1 {
-  background-image: url(/images/pr_1.jpg);
+  background-image: url(../images/pr_1.jpg);
   -webkit-background-size: 157px 99px;
           background-size: 157px 99px;
   background-position-x: 32px;
@@ -896,7 +896,7 @@ Javascript disabled
   background-repeat: no-repeat; }
 
 .laptop_pic--2 {
-  background-image: url(/images/pr_2.jpg);
+  background-image: url(../images/pr_2.jpg);
   -webkit-background-size: 157px 99px;
           background-size: 157px 99px;
   background-position-x: 32px;
@@ -904,7 +904,7 @@ Javascript disabled
   background-repeat: no-repeat; }
 
 .laptop_pic--3 {
-  background-image: url(/images/pr_3.jpg);
+  background-image: url(../images/pr_3.jpg);
   -webkit-background-size: 157px 99px;
           background-size: 157px 99px;
   background-position-x: 32px;
@@ -912,7 +912,7 @@ Javascript disabled
   background-repeat: no-repeat; }
 
 .laptop_pic--4 {
-  background-image: url(/images/pr_4.jpg);
+  background-image: url(../images/pr_4.jpg);
   -webkit-background-size: 157px 99px;
           background-size: 157px 99px;
   background-position-x: 32px;
@@ -920,7 +920,7 @@ Javascript disabled
   background-repeat: no-repeat; }
 
 .laptop_pic--5 {
-  background-image: url(/images/pr_5.jpg);
+  background-image: url(../images/pr_5.jpg);
   -webkit-background-size: 157px 99px;
           background-size: 157px 99px;
   background-position-x: 32px;
