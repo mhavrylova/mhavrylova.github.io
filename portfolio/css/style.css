@@ -794,7 +794,7 @@ Javascript disabled
   align-items: center;
   color: #5B5B5B;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 30px;
   justify-content: flex-start; }
   .icon_cv:before {
     content: ""; }
@@ -803,8 +803,8 @@ Javascript disabled
   font-size: 30px; }
 
 .cv {
-  font-size: 14px;
-  margin-left: 15px; }
+  font-size: 16px;
+  margin-left: 5px; }
 
 .icon_git:hover, .icon_fb:hover, .icon_linkedin:hover, .icon_cv:hover {
   color: #EA4D01; }
@@ -812,17 +812,18 @@ Javascript disabled
 .my_skills {
   margin-bottom: 60px; }
 
+.cd-fold-content .cv_download {
+  margin-top: 50px; }
+  .cd-fold-content .cv_download button {
+    border-radius: 10px;
+    padding-right: 15px; }
+
 .social_contacts {
-  display: flex; }
+  display: flex;
+  margin-top: 60px; }
   .social_contacts a {
     margin-right: 0;
     margin-left: 10px; }
-
-.flex {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 60px;
-  align-items: center; }
 
 .cd-fold-content .works_list {
   list-style: none;
@@ -851,35 +852,35 @@ Javascript disabled
 
 .laptop_pic--1 {
   background-image: url(../images/pr_1.jpg);
-  background-size: 157px 99px;
+  background-size: 158px 99px;
   background-position-x: 32px;
   background-position-y: 2px;
   background-repeat: no-repeat; }
 
 .laptop_pic--2 {
   background-image: url(../images/pr_2.jpg);
-  background-size: 157px 99px;
+  background-size: 158px 99px;
   background-position-x: 32px;
   background-position-y: 2px;
   background-repeat: no-repeat; }
 
 .laptop_pic--3 {
   background-image: url(../images/pr_3.jpg);
-  background-size: 157px 99px;
+  background-size: 158px 99px;
   background-position-x: 32px;
   background-position-y: 2px;
   background-repeat: no-repeat; }
 
 .laptop_pic--4 {
   background-image: url(../images/pr_4.jpg);
-  background-size: 157px 99px;
+  background-size: 158px 99px;
   background-position-x: 32px;
   background-position-y: 2px;
   background-repeat: no-repeat; }
 
 .laptop_pic--5 {
   background-image: url(../images/pr_5.jpg);
-  background-size: 157px 99px;
+  background-size: 158px 99px;
   background-position-x: 32px;
   background-position-y: 2px;
   background-repeat: no-repeat; }
