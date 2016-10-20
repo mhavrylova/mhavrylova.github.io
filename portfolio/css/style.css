@@ -10,21 +10,21 @@
   font-family: "social"; }
 
 @font-face {
-  font-family: 'HelveticaNeueLTStd-Md';
-  src: url("../fonts/HelveticaNeueLTStd-Md");
-  src: url("../fonts/HelveticaNeueLTStd-Md.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueLTStd-Md.woff") format("woff"), url("../fonts/HelveticaNeueLTStd-Md.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
   font-family: 'appleberry';
   src: url("../fonts/appleberry.eot?#iefix") format("embedded-opentype"), url("../fonts/appleberry.woff") format("woff"), url("../fonts/appleberry.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'BreadyAlternatesDemo';
-  src: url("../fonts/BreadyAlternatesDemo.eot?#iefix") format("embedded-opentype"), url("../fonts/BreadyAlternatesDemo.woff") format("woff"), url("../fonts/BreadyAlternatesDemo.ttf") format("truetype");
+  font-family: 'telegraphem';
+  src: url("../fonts/telegraphem.eot");
+  src: url("../fonts/telegraphem.eot?#iefix") format("embedded-opentype"), url("../fonts/telegraphem.woff") format("woff"), url("../fonts/telegraphem.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'aflfont';
+  src: url("../fonts/aflfont.eot?#iefix") format("embedded-opentype"), url("../fonts/aflfont.woff") format("woff"), url("../fonts/aflfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -36,15 +36,12 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #008200; }
 
 a {
   color: #EA4D01;
   text-decoration: none; }
-
-h1, h2 {
-  font-family: "Vollkorn", serif; }
 
 .clearfix:after {
   content: '';
@@ -66,7 +63,7 @@ Header
 
 -------------------------------- */
 header {
-  height: 400px;
+  height: 390px;
   position: relative;
   padding-top: 20px;
   text-align: center; }
@@ -75,10 +72,10 @@ header {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url(../images/header_bg3.jpg);
+    background-image: url(../images/header_bg2.jpg);
     background-size: cover;
     background-position: 0;
-    opacity: 0.3;
+    opacity: 0.5;
     display: block;
     top: 0;
     left: 0;
@@ -88,7 +85,7 @@ header {
     color: #008200; }
   @media only screen and (min-width: 600px) {
     header {
-      height: 400px; }
+      height: 390px; }
       header h1 {
         font-size: 3rem; } }
 
@@ -100,56 +97,29 @@ header {
 .laptop {
   font-size: 24px;
   margin-top: 5px;
-  background-image: url(../images/laptop2.png);
+  background-image: url(../images/book_open.gif);
   background-repeat: no-repeat;
-  background-size: auto 400px;
+  background-size: auto 370px;
   height: 100%;
-  width: 525px;
+  width: 595px;
   padding: 30px 35px 30px 30px;
   display: inline-block; }
-  @media (min-width: 300px) and (max-width: 525px) {
-    .laptop {
-      background-image: none;
-      width: 90%;
-      height: 90%;
-      background-color: rgba(255, 255, 255, 0.5);
-      border: 20px solid black;
-      border-radius: 5px; } }
-  @media (min-width: 300px) and (max-width: 380px) {
-    .laptop {
-      padding: 15px; } }
-  @media (max-width: 480px) {
-    .laptop {
-      font-size: 20px;
-      margin: 0; } }
-  @media (max-width: 525px) {
-    .laptop {
-      border-color: grey; } }
 
 .avatar {
   width: 100px;
   height: 100px;
-  border-radius: 100px;
+  opacity: 0.9;
+  border-radius: 20px;
   background-image: url(../images/me.jpg);
   background-size: 150px;
   background-position: 275px 365px;
   float: left; }
-  @media (min-width: 300px) and (max-width: 405px) {
-    .avatar {
-      display: none; } }
-  @media (max-width: 505px) {
-    .avatar {
-      width: 50px;
-      height: 50px;
-      background-size: 100px;
-      background-position: 275px 365px;
-      margin-top: 12px; } }
 
 .user_info {
-  margin-left: 15px;
+  margin-left: 50px;
+  margin-top: 15px;
   float: left;
-  text-align: left;
-  font-family: 'HelveticaNeueLTStd-Md';
+  font-family: 'telegraphem';
   color: #3B8200;
   font-weight: bold;
   text-shadow: 3px 1px 5px rgba(248, 136, 11, 0.5); }
@@ -160,19 +130,14 @@ header {
   text-transform: uppercase; }
 
 .typing {
-  margin-top: 5px;
-  background-color: rgba(248, 136, 11, 0.3);
-  border: 1px solid #F8880B;
+  margin-top: 30px;
   border-radius: 5px;
   font-size: 14px;
-  font-family: monospace;
-  color: #365800;
+  font-family: 'telegraphem';
+  color: #B5651E;
   text-align: left;
   font-weight: bold;
-  width: 100%; }
-  @media (max-width: 450px) {
-    .typing {
-      font-size: 12px; } }
+  width: 95%; }
 
 .hidden {
   display: none;
@@ -180,7 +145,9 @@ header {
 
 /* ----- blinking cursor animation ----- */
 .typed-cursor {
-  opacity: 1;
+  font-size: 25px;
+  color: #693600;
+  opacity: 0.5;
   -webkit-animation: blink 0.95s infinite;
   -moz-animation: blink 0.95s infinite;
   -ms-animation: blink 0.95s infinite;
@@ -668,7 +635,6 @@ folding panel
     -o-transform: translateY(20px);
     transform: translateY(20px); }
   .cd-fold-content h2 {
-    font-family: 'HelveticaNeueLTStd-Md';
     font-size: 36px;
     text-transform: uppercase;
     margin-bottom: 40px;
@@ -683,8 +649,8 @@ folding panel
   .cd-fold-content ul {
     color: #5B5B5B; }
   .cd-fold-content li {
-    line-height: 18px;
-    font-size: 16px;
+    line-height: 22px;
+    font-size: 18px;
     margin-top: 10px; }
   .cd-fold-content h4 {
     font-size: 20px;
@@ -696,22 +662,13 @@ folding panel
       font-style: italic;
       font-size: 14px; }
   .cd-fold-content p, .cd-fold-content em {
-    font-family: 'HelveticaNeueLTStd-Md';
     font-size: 18px;
     line-height: 24px;
     color: #5B5B5B;
     text-align: justify; }
-  .cd-fold-content .social_contacts {
-    margin-top: 40px; }
-    .cd-fold-content .social_contacts img {
-      width: 30px;
-      height: 30px;
-      margin-right: 0;
-      margin-left: 10px; }
   .cd-fold-content em {
     display: inline-block;
     margin: 1em 0;
-    font-family: "Vollkorn", serif;
     font-size: 1.8rem;
     color: #1cff1c;
     -webkit-transition: -webkit-transform 0.2s 0.1s, opacity 0.2s 0.1s;
@@ -803,24 +760,128 @@ Javascript disabled
       height: 50px; } }
 
 .selected {
-  font-weight: bold;
-  letter-spacing: 2px; }
+  font-weight: bold; }
+
+.selected_it {
+  font-weight: 300; }
 
 .contact_icon {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   margin-right: 25px;
   vertical-align: middle; }
   @media (max-width: 400px) {
     .contact_icon {
       margin-right: 10px; } }
 
-.my_work img {
-  margin-right: 5px;
-  width: 35px;
-  height: 35px; }
+.icon_git {
+  color: #000000; }
+  .icon_git:before {
+    content: ""; }
 
-.my_work:hover {
-  text-decoration: underline; }
+.icon_fb {
+  color: #3B5998; }
+  .icon_fb:before {
+    content: ""; }
+
+.icon_linkedin {
+  color: #0E76A8; }
+  .icon_linkedin:before {
+    content: ""; }
+
+.icon_cv {
+  display: flex;
+  align-items: center;
+  color: #5B5B5B;
+  font-weight: 400;
+  font-size: 40px;
+  justify-content: flex-start; }
+  .icon_cv:before {
+    content: ""; }
+
+.icon_git, .icon_fb, .icon_linkedin {
+  font-size: 30px; }
+
+.cv {
+  font-size: 14px;
+  margin-left: 15px; }
+
+.icon_git:hover, .icon_fb:hover, .icon_linkedin:hover, .icon_cv:hover {
+  color: #EA4D01; }
+
+.my_skills {
+  margin-bottom: 60px; }
+
+.social_contacts {
+  display: flex; }
+  .social_contacts a {
+    margin-right: 0;
+    margin-left: 10px; }
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  align-items: center; }
+
+.cd-fold-content .works_list {
+  list-style: none;
+  padding: 0; }
+  .cd-fold-content .works_list a {
+    color: #5B5B5B; }
+    .cd-fold-content .works_list a:hover {
+      color: #EA4D01; }
+  .cd-fold-content .works_list-item {
+    border-bottom: 1px solid #ACACAC;
+    padding: 40px 0; }
+
+.cd-fold-content .laptop_pic {
+  width: auto;
+  height: 150px; }
+
+.cd-fold-content .laptop_pic2 {
+  width: auto;
+  height: 150px;
+  order: 2; }
+
+.cd-fold-content .my_work {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.laptop_pic--1 {
+  background-image: url(/images/pr_1.jpg);
+  background-size: 157px 99px;
+  background-position-x: 32px;
+  background-position-y: 2px;
+  background-repeat: no-repeat; }
+
+.laptop_pic--2 {
+  background-image: url(/images/pr_2.jpg);
+  background-size: 157px 99px;
+  background-position-x: 32px;
+  background-position-y: 2px;
+  background-repeat: no-repeat; }
+
+.laptop_pic--3 {
+  background-image: url(/images/pr_3.jpg);
+  background-size: 157px 99px;
+  background-position-x: 32px;
+  background-position-y: 2px;
+  background-repeat: no-repeat; }
+
+.laptop_pic--4 {
+  background-image: url(/images/pr_4.jpg);
+  background-size: 157px 99px;
+  background-position-x: 32px;
+  background-position-y: 2px;
+  background-repeat: no-repeat; }
+
+.laptop_pic--5 {
+  background-image: url(/images/pr_5.jpg);
+  background-size: 157px 99px;
+  background-position-x: 32px;
+  background-position-y: 2px;
+  background-repeat: no-repeat; }
 
 /*# sourceMappingURL=style.css.map */

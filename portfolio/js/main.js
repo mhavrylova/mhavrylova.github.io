@@ -48,19 +48,6 @@ jQuery(document).ready(function($){
 					$('body').addClass('overflow-hidden');
 					foldingPanel.addClass('is-open');
 					mainContent.addClass('fold-is-open');
-  			  $('.sl').slick({
-				  	 autoplay: true, //АВТОМАТИЧЕСКОЕ ПЕРЕЛИСТЫВАНИЕ
-				  	 autoplaySpeed: 1000, //СКОРОСТЬ ПЕРЕЛИСТЫВАНИЯ
-				  	 speed: 2000, //СКОРОСТЬ анимации
-				  	 variableWidth: true,
-				  	 centerMode: true, //СЛАЙДЫ ПО ЦЕНТРУ С ОТСТУПАМИ ПО БОКАМ В ВИДЕ СОСЕДЕЙ
-				  	 dots:false, //добавить точки внизу
-				  	 arrows:false, //убрать стрелочки
-				  	 slidesToShow:5, // сколько слайдов показывается
-				  	 slidesToScroll:5, // сколько слайдов перелистывается
-				  	 zIndex:1000, // задать нужный зед-индекс
-				  	 infinite: true,
-	  				}); //прыкостыляла загрузку slick карусель
 				}, 100);
 				
 			});

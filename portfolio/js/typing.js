@@ -1,11 +1,11 @@
 // set typing speed and wait times
-var timeInit = 1000;     // initial wait before typing first line
-var timeGap = 1000;      // wait time between each line
-var timeChar = 40;       // time until next letter
+var timeInit = 500;     // initial wait before typing first line
+var timeGap = 500;      // wait time between each line
+var timeChar = 60;       // time until next letter
 
-var cursorChar = '&#9608;';
+var cursorChar = '&#x2759;';
 
-var originId = ['line1', 'line2','line3'];
+var originId = ['line1', 'line2','line3', 'line4'];
 var originText = new Array();
 for (var i = 0; i < originId.length; i++) {
   originText.push(document.getElementById(originId[i]).innerHTML);
@@ -30,9 +30,9 @@ var typeWriter = function(index) {
 
       // stops the function from self-calling when all letters are typed
       if (letterCount === fullText.length) {
-        loc.innerHTML = '&gt;&gt; ' + showText;
+        loc.innerHTML = showText;
       } else {
-        loc.innerHTML = '&gt;&gt; ' + showText + '<span class="typed-cursor">' + cursorChar + '</span>';
+        loc.innerHTML = showText + '<span class="typed-cursor">' + cursorChar + '</span>';
         typeLetter();
       }
     }, timeChar);
@@ -81,17 +81,10 @@ var skip = function() {
   };
 };
 
-// rewrite text with value stored on page load
-
-// var rewriteText = function(index) {
-//   var loc = document.getElementById(originId[index]);
-//   loc.innerHTML = '&gt;&gt; ' + originText[index];
-//   loc.className = 'visible';
-// };
 
 var rewriteText = function(element, index, array) {
   var loc = document.getElementById(element);
-  loc.innerHTML = '&gt;&gt; ' + originText[index];
+  loc.innerHTML = originText[index];
   loc.className = 'visible';
 };
 
