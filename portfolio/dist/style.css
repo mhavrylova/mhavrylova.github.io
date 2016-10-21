@@ -86,11 +86,12 @@ header {
   header h1 {
     font-size: 2.2rem;
     color: #008200; }
-  @media only screen and (min-width: 600px) {
+  @media (min-width: 450px) and (max-width: 549px) {
     header {
-      height: 390px; }
-      header h1 {
-        font-size: 3rem; } }
+      height: 320px; } }
+  @media (max-width: 449px) {
+    header {
+      height: 100px; } }
 
 .mypic {
   width: 160px;
@@ -105,9 +106,22 @@ header {
   -webkit-background-size: auto 370px;
           background-size: auto 370px;
   height: 100%;
-  width: 595px;
-  padding: 30px 35px 30px 30px;
+  width: 550px;
+  padding: 30px;
   display: inline-block; }
+  @media (min-width: 450px) and (max-width: 549px) {
+    .laptop {
+      -webkit-background-size: auto 300px;
+              background-size: auto 300px;
+      width: 445px;
+      font-size: 16px; } }
+  @media (max-width: 449px) {
+    .laptop {
+      -webkit-background-size: auto 215px;
+              background-size: auto 215px;
+      width: 325px;
+      padding: 5px;
+      font-size: 18px; } }
 
 .avatar {
   width: 100px;
@@ -119,6 +133,18 @@ header {
           background-size: 150px;
   background-position: 275px 365px;
   float: left; }
+  @media (min-width: 450px) and (max-width: 549px) {
+    .avatar {
+      width: 70px;
+      height: 70px;
+      background-position: 260px 360px; } }
+  @media (max-width: 449px) {
+    .avatar {
+      display: none; } }
+
+@media (max-width: 449px) {
+  .user {
+    display: inline-block; } }
 
 .user_info {
   margin-left: 50px;
@@ -130,6 +156,13 @@ header {
   text-shadow: 3px 1px 5px rgba(248, 136, 11, 0.5); }
   .user_info p {
     margin: 10px 0; }
+  @media (min-width: 450px) and (max-width: 549px) {
+    .user_info {
+      margin-top: 5px; } }
+  @media (max-width: 449px) {
+    .user_info {
+      margin: 0;
+      display: inline-block; } }
 
 .user_name {
   text-transform: uppercase; }
@@ -143,6 +176,13 @@ header {
   text-align: left;
   font-weight: bold;
   width: 95%; }
+  @media (min-width: 450px) and (max-width: 549px) {
+    .typing {
+      margin-top: 10px;
+      font-size: 12px; } }
+  @media (max-width: 449px) {
+    .typing {
+      display: none; } }
 
 .hidden {
   display: none;
@@ -301,9 +341,10 @@ Main content
     display: inline-block;
     padding: 0 20px;
     border-radius: 30px; }
-    @media (max-width: 480px) {
+    @media (max-width: 359px) {
       .cd-item h2 {
-        font-size: 24px; } }
+        font-size: 24px;
+        padding: 0; } }
   .cd-item p {
     line-height: 1.2;
     font-size: 1.4rem;
@@ -849,6 +890,13 @@ Javascript disabled
     color: #5B5B5B; }
     .cd-fold-content .works_list a:hover {
       color: #EA4D01; }
+    @media (max-width: 599px) {
+      .cd-fold-content .works_list a {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
   .cd-fold-content .works_list-item {
     border-bottom: 1px solid #ACACAC;
     padding: 40px 0; }
@@ -856,6 +904,9 @@ Javascript disabled
 .cd-fold-content .laptop_pic {
   width: auto;
   height: 150px; }
+  @media (max-width: 599px) {
+    .cd-fold-content .laptop_pic {
+      margin-bottom: 15px; } }
 
 .cd-fold-content .laptop_pic2 {
   width: auto;
@@ -864,6 +915,13 @@ Javascript disabled
   -webkit-order: 2;
       -ms-flex-order: 2;
           order: 2; }
+  @media (max-width: 599px) {
+    .cd-fold-content .laptop_pic2 {
+      -webkit-box-ordinal-group: 1;
+      -webkit-order: 0;
+          -ms-flex-order: 0;
+              order: 0;
+      margin-bottom: 15px; } }
 
 .cd-fold-content .my_work {
   display: -webkit-box;

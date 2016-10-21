@@ -73,13 +73,12 @@ header {
 		color: $color-1;
 	}
 
-	@include MQ(M) {
-		height: 390px;
-
-		h1 {
-			font-size: 3rem;
-		}
-	}
+			 	@media (min-width: 450px) and (max-width: 549px) {
+	height: 320px;
+	 }
+	 			 	@media (max-width: 449px) {
+	height: 100px;
+	 }
 }
 
 
@@ -89,28 +88,6 @@ header {
 	float: left;
 }
 
-// .laptop {
-// 	font-size: 24px;
-// 	margin-top: 5px;
-// 	background-image: url(../images/laptop2.png);
-// 	background-repeat: no-repeat;
-// 	background-size: auto 400px;
-// 	height: 100%;
-// 	width: 525px;
-//     padding: 30px 35px 30px 30px;
-// 	display: inline-block;
-	
-// 	@media (min-width: 320px) and (max-width: 525px) {
-// 	background-image: none;
-// 	width: 90%;
-// 	height: 90%;
-// 	background-color: rgba(255,255,255,0.5);
-// 	border: 20px solid black;
-// 	border-radius: 5px;	
-// 	border-color: grey;		
-// 	}
-
-// }
 
 .laptop {
 	font-size: 24px;
@@ -119,10 +96,20 @@ header {
 	background-repeat: no-repeat;
 	background-size: auto 370px;
 	height: 100%;
-	width: 595px;
-    padding: 30px 35px 30px 30px;
+	width: 550px;
+    padding: 30px;
 	display: inline-block;
-	
+	 	@media (min-width: 450px) and (max-width: 549px) {
+		    background-size: auto 300px;
+		    width: 445px;
+		        font-size: 16px;
+	 }
+	 	 			 	@media (max-width: 449px) {
+background-size: auto 215px;
+    width: 325px;
+    padding: 5px;
+    font-size: 18px;
+	 }
 
 }
 
@@ -135,6 +122,23 @@ header {
     background-size: 150px;
 	background-position: 275px 365px;
 	float: left;
+		@media (min-width: 450px) and (max-width: 549px) {
+			    width: 70px;
+    height: 70px;
+        background-position: 260px 360px;
+	 }
+	 	 	 			 	@media (max-width: 449px) {
+display: none;
+	 }
+
+}
+
+.user {
+
+	 	 	 			 	@media (max-width: 449px) {
+display: inline-block;
+	 }
+
 }
 
 .user_info {
@@ -148,6 +152,13 @@ header {
 	p {
 		margin: 10px 0;
 	}
+		 	@media (min-width: 450px) and (max-width: 549px) {
+	margin-top: 5px;
+	 }
+	 	 	 			 	@media (max-width: 449px) {
+margin: 0;
+display: inline-block;
+	 }
 }
 
 .user_name {
@@ -156,8 +167,6 @@ header {
 
 .typing {
 	margin-top: 30px;
-	// background-color: rgba(248, 136, 11, 0.3);
-	// border: 1px solid #F8880B;
 	border-radius: 5px;
 	font-size: 14px;
 	font-family: 'telegraphem';
@@ -165,6 +174,13 @@ header {
 	text-align: left;
 	font-weight: bold;
 	width: 95%;
+			 	@media (min-width: 450px) and (max-width: 549px) {
+	margin-top: 10px;
+	font-size: 12px;
+	 }
+	 	 	 	 			 	@media (max-width: 449px) {
+display: none;
+	 }
 }
 
 .hidden {
@@ -336,8 +352,9 @@ Main content
 		display: inline-block;
 		padding: 0 20px;
     	border-radius: 30px;
-    	    @media (max-width: 480px) {
+    	    @media (max-width: 359px) {
 			font-size: 24px;
+			padding: 0;
 			}
 	}
 
@@ -884,6 +901,9 @@ Javascript disabled
 			&:hover {
 				color: $color-2;
 			}
+			@media (max-width: 599px) {
+				flex-direction:column;
+			}
 		}
 		&-item {
 			border-bottom: 1px solid $color-5;
@@ -894,12 +914,20 @@ Javascript disabled
 	.cd-fold-content .laptop_pic {
 	    width: auto;
 	    height: 150px;
+	    	    			@media (max-width: 599px) {
+
+				margin-bottom: 15px;
+			}
 	}
 
 	.cd-fold-content .laptop_pic2 {
 	    width: auto;
 	    height: 150px;
 	    order:2;
+	    			@media (max-width: 599px) {
+				order:0;
+				margin-bottom: 15px;
+			}
 	}
 
 

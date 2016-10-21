@@ -1,7 +1,7 @@
 // set typing speed and wait times
-var timeInit = 500;     // initial wait before typing first line
-var timeGap = 500;      // wait time between each line
-var timeChar = 60;       // time until next letter
+var timeInit = 300;     // initial wait before typing first line
+var timeGap = 300;      // wait time between each line
+var timeChar = 50;       // time until next letter
 
 var cursorChar = '&#x2759;';
 
