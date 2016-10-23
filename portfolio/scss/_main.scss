@@ -656,23 +656,36 @@ folding panel
 		text-transform: uppercase;
 		margin-bottom: 40px;
 		text-align: center;
-
 		@include transition(transform $fold-content-animation/2 $fold-content-animation/2, opacity $fold-content-animation/2 $fold-content-animation/2);
+	@media (max-width: 599px) {
+			font-size: 26px;
+			    margin-bottom: 15px;
+		}
 	}
 
 	h3 {
 		font-size: 30px;
 		margin-top: 30px;
 		margin-bottom: 0;
+			@media (max-width: 599px) {
+			font-size: 20px;
+		}
 	}
  	ul {
  		color: #5B5B5B;
+ 							@media (max-width: 599px) {
+			padding-left: 10px;
+		}
  	}
 
  	li {
 		line-height: 22px;
 		font-size: 18px;
 		margin-top: 10px;
+			@media (max-width: 599px) {
+			font-size: 14px;
+		line-height: 14px;			
+		}
  	}
 
 	h4 {
@@ -684,7 +697,13 @@ folding panel
 			.exp_period {
 				font-style: italic;
 				font-size: 14px;
+										@media (max-width: 599px) {
+			font-size: 12px;		
+		}
 			}
+						@media (max-width: 599px) {
+			font-size: 14px;		
+		}
 	}
 
 	p, em {
@@ -693,6 +712,9 @@ folding panel
 		line-height: 24px;
 			color: #5B5B5B;
 			text-align: justify;
+									@media (max-width: 599px) {
+			line-height: 16px;		
+		}
 	}
 
 
@@ -815,9 +837,11 @@ Javascript disabled
 	height: 40px;
 	margin-right: 25px;
 	vertical-align: middle;
-		@media (max-width: 400px) {
-			margin-right: 10px;
-	}	
+		@media (max-width: 599px) {
+				margin-right: 10px;
+					width: 25px;
+	height: 25px;
+			}	
 }
 
 .icon_git {
@@ -845,27 +869,37 @@ Javascript disabled
 .icon_cv {
 		display: flex;
 	align-items:center;
-	color: #5B5B5B;
+	color: $color-6;
 	font-weight: 400;
 	font-size: 30px;
 	justify-content: flex-start;
 	&:before {
 		content: $icon-cv;
 	}
+			    			@media (max-width: 599px) {
+				font-size: 20px;
+			}
 }
 
 .icon_git, .icon_fb, .icon_linkedin {
 	 font-size: 30px;
+	 			    			@media (max-width: 599px) {
+				font-size: 20px;
+			}
 }
 
 
 .cv {
 	font-size: 16px;
 	margin-left: 5px;
+		    			@media (max-width: 599px) {
+				font-size: 12px;
+			}
+				
 }
 
 
-.icon_git:hover, .icon_fb:hover, .icon_linkedin:hover, .icon_cv:hover {
+.icon_git:hover, .icon_fb:hover, .icon_linkedin:hover {
 	 color:$color-2;
 }
 
@@ -873,6 +907,9 @@ Javascript disabled
 
 .my_skills {
 	margin-bottom: 60px;
+				@media (max-width: 599px) {
+			margin-bottom: 30px;
+		}
 }
 
 .cd-fold-content .cv_download {
@@ -880,12 +917,30 @@ Javascript disabled
 	button {
 		border-radius: 10px;
 		    padding-right: 15px;
+		    background-color: $color-6;
+			border: 2px solid $color-2;
+			.icon_cv {
+				color: $color-2;
+			}
+			&:hover {
+				border-color: $color-6;
+				background-color: $color-2;
+			}
+			&:hover .icon_cv {
+				color: $color-6;
+			}
 	}
+					@media (max-width: 599px) {
+			margin-top: 25px;
+		}
 }
 
 	.social_contacts {
 	display: flex;
-	margin-top: 60px;					
+	margin-top: 60px;	
+							@media (max-width: 599px) {
+				margin-top: 20px;
+			}	
 		a {
 			margin-right: 0;
 			margin-left: 10px;		
@@ -908,6 +963,9 @@ Javascript disabled
 		&-item {
 			border-bottom: 1px solid $color-5;
 			padding: 40px 0;
+									@media (max-width: 599px) {
+			padding: 20px 0;		
+		}
 		}
 	}
 

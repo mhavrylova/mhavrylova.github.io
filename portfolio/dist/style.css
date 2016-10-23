@@ -676,16 +676,30 @@ folding panel
     -o-transition: opacity 0.2s 0.2s, -o-transform 0.2s 0.2s;
     transition: transform 0.2s 0.2s, opacity 0.2s 0.2s;
     transition: transform 0.2s 0.2s, opacity 0.2s 0.2s, -webkit-transform 0.2s 0.2s, -o-transform 0.2s 0.2s; }
+    @media (max-width: 599px) {
+      .cd-fold-content h2 {
+        font-size: 26px;
+        margin-bottom: 15px; } }
   .cd-fold-content h3 {
     font-size: 30px;
     margin-top: 30px;
     margin-bottom: 0; }
+    @media (max-width: 599px) {
+      .cd-fold-content h3 {
+        font-size: 20px; } }
   .cd-fold-content ul {
     color: #5B5B5B; }
+    @media (max-width: 599px) {
+      .cd-fold-content ul {
+        padding-left: 10px; } }
   .cd-fold-content li {
     line-height: 22px;
     font-size: 18px;
     margin-top: 10px; }
+    @media (max-width: 599px) {
+      .cd-fold-content li {
+        font-size: 14px;
+        line-height: 14px; } }
   .cd-fold-content h4 {
     font-size: 20px;
     font-weight: bold;
@@ -695,11 +709,20 @@ folding panel
     .cd-fold-content h4 .exp_period {
       font-style: italic;
       font-size: 14px; }
+      @media (max-width: 599px) {
+        .cd-fold-content h4 .exp_period {
+          font-size: 12px; } }
+    @media (max-width: 599px) {
+      .cd-fold-content h4 {
+        font-size: 14px; } }
   .cd-fold-content p, .cd-fold-content em {
     font-size: 18px;
     line-height: 24px;
     color: #5B5B5B;
     text-align: justify; }
+    @media (max-width: 599px) {
+      .cd-fold-content p, .cd-fold-content em {
+        line-height: 16px; } }
   .cd-fold-content em {
     display: inline-block;
     margin: 1em 0;
@@ -816,9 +839,11 @@ Javascript disabled
   height: 40px;
   margin-right: 25px;
   vertical-align: middle; }
-  @media (max-width: 400px) {
+  @media (max-width: 599px) {
     .contact_icon {
-      margin-right: 10px; } }
+      margin-right: 10px;
+      width: 25px;
+      height: 25px; } }
 
 .icon_git {
   color: #000000; }
@@ -844,7 +869,7 @@ Javascript disabled
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #5B5B5B;
+  color: #ffffff;
   font-weight: 400;
   font-size: 30px;
   -webkit-box-pack: start;
@@ -853,25 +878,49 @@ Javascript disabled
           justify-content: flex-start; }
   .icon_cv:before {
     content: ""; }
+  @media (max-width: 599px) {
+    .icon_cv {
+      font-size: 20px; } }
 
 .icon_git, .icon_fb, .icon_linkedin {
   font-size: 30px; }
+  @media (max-width: 599px) {
+    .icon_git, .icon_fb, .icon_linkedin {
+      font-size: 20px; } }
 
 .cv {
   font-size: 16px;
   margin-left: 5px; }
+  @media (max-width: 599px) {
+    .cv {
+      font-size: 12px; } }
 
-.icon_git:hover, .icon_fb:hover, .icon_linkedin:hover, .icon_cv:hover {
+.icon_git:hover, .icon_fb:hover, .icon_linkedin:hover {
   color: #EA4D01; }
 
 .my_skills {
   margin-bottom: 60px; }
+  @media (max-width: 599px) {
+    .my_skills {
+      margin-bottom: 30px; } }
 
 .cd-fold-content .cv_download {
   margin-top: 50px; }
   .cd-fold-content .cv_download button {
     border-radius: 10px;
-    padding-right: 15px; }
+    padding-right: 15px;
+    background-color: #ffffff;
+    border: 2px solid #EA4D01; }
+    .cd-fold-content .cv_download button .icon_cv {
+      color: #EA4D01; }
+    .cd-fold-content .cv_download button:hover {
+      border-color: #ffffff;
+      background-color: #EA4D01; }
+    .cd-fold-content .cv_download button:hover .icon_cv {
+      color: #ffffff; }
+  @media (max-width: 599px) {
+    .cd-fold-content .cv_download {
+      margin-top: 25px; } }
 
 .social_contacts {
   display: -webkit-box;
@@ -879,6 +928,9 @@ Javascript disabled
   display: -ms-flexbox;
   display: flex;
   margin-top: 60px; }
+  @media (max-width: 599px) {
+    .social_contacts {
+      margin-top: 20px; } }
   .social_contacts a {
     margin-right: 0;
     margin-left: 10px; }
@@ -900,6 +952,9 @@ Javascript disabled
   .cd-fold-content .works_list-item {
     border-bottom: 1px solid #ACACAC;
     padding: 40px 0; }
+    @media (max-width: 599px) {
+      .cd-fold-content .works_list-item {
+        padding: 20px 0; } }
 
 .cd-fold-content .laptop_pic {
   width: auto;
