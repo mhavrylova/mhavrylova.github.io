@@ -5,8 +5,10 @@ var gulp         = require('gulp'),
     browser      = require('browser-sync'),
     sourcemaps   = require('gulp-sourcemaps'),
     iconfont = require("gulp-iconfont"),
-    consolidate = require("gulp-consolidate");
-    spritesmith = require('gulp.spritesmith');
+    imagemin = require('gulp-imagemin'),
+    consolidate = require("gulp-consolidate"),
+    spritesmith = require('gulp.spritesmith'),
+    imageop = require('gulp-image-optimization'),
     sourcemaps   = require('gulp-sourcemaps');
 
 gulp.task('sass', function () {
@@ -25,6 +27,24 @@ gulp.task('sprite', function () {
   }));
   return spriteData.pipe(gulp.dest("./scss/sprites/"));
 });
+
+
+gulp.task('images', () =>
+    gulp.src('./images/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('./images/'))
+);
+
+
+ 
+gulp.task('imagesopt', function(cb) {
+    gulp.src(['./images/*.png','./images/*.jpg','./images/*.gif','./images/*.jpeg']).pipe(imageop({
+        optimizationLevel: 5,
+        progressive: true,
+        interlaced: true
+    })).pipe(gulp.dest('./images')).on('end', cb).on('error', cb);
+});
+
 gulp.task('autoprefixer', function () {
     return gulp.src('./css/*.css')
         .pipe(sourcemaps.init())
