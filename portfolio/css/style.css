@@ -957,36 +957,31 @@ Javascript disabled
 .laptop_pic--1 {
   background-image: url(../images/pr_1.jpg);
   background-size: 158px 99px;
-  background-position-x: 32px;
-  background-position-y: 2px;
+  background-position: 32px 2px;
   background-repeat: no-repeat; }
 
 .laptop_pic--2 {
   background-image: url(../images/pr_2.jpg);
   background-size: 158px 99px;
-  background-position-x: 32px;
-  background-position-y: 2px;
+  background-position: 32px 2px;
   background-repeat: no-repeat; }
 
 .laptop_pic--3 {
   background-image: url(../images/pr_3.jpg);
   background-size: 158px 99px;
-  background-position-x: 32px;
-  background-position-y: 2px;
+  background-position: 32px 2px;
   background-repeat: no-repeat; }
 
 .laptop_pic--4 {
   background-image: url(../images/pr_4.jpg);
   background-size: 158px 99px;
-  background-position-x: 32px;
-  background-position-y: 2px;
+  background-position: 32px 2px;
   background-repeat: no-repeat; }
 
 .laptop_pic--5 {
   background-image: url(../images/pr_5.jpg);
   background-size: 158px 99px;
-  background-position-x: 32px;
-  background-position-y: 2px;
+  background-position: 32px 2px;
   background-repeat: no-repeat; }
 
 /*# sourceMappingURL=style.css.map */
