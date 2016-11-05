@@ -153,10 +153,11 @@ body {
       .choose-country__country {
         font-size: 10px; } }
   .choose-country__arrow {
-    background-color: inherit;
+    background-color: transparent;
     border: none;
     padding: 0;
     outline: none;
+    cursor: pointer;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -220,10 +221,11 @@ body {
   width: 320px; }
 
 .search-icon {
-  background-color: inherit;
+  background-color: transparent;
   border: none;
   padding: 0;
   outline: none;
+  cursor: pointer;
   margin-right: 18px; }
   .search-icon:before {
     content: "";
@@ -252,10 +254,11 @@ body {
           align-items: center; }
   .wish-list__heart {
     margin-right: 10px;
-    background-color: inherit;
+    background-color: transparent;
     border: none;
     padding: 0;
-    outline: none; }
+    outline: none;
+    cursor: pointer; }
     .wish-list__heart:before {
       content: "";
       font-family: "social";
@@ -296,10 +299,11 @@ body {
   height: 100%;
   padding: 0 20px 0 25px; }
   .order-list__bag {
-    background-color: inherit;
+    background-color: transparent;
     border: none;
     padding: 0;
     outline: none;
+    cursor: pointer;
     margin-right: 7px; }
     .order-list__bag:before {
       content: "";
@@ -522,10 +526,11 @@ body {
           justify-content: center; }
 
 .action-button {
-  background-color: inherit;
+  background-color: transparent;
   border: none;
   padding: 0;
   outline: none;
+  cursor: pointer;
   font-size: 16px;
   border: 1px solid #fff;
   color: white;
@@ -967,10 +972,11 @@ body {
       margin-right: 0; }
 
 .slider__arrow {
-  background-color: inherit;
+  background-color: transparent;
   border: none;
   padding: 0;
   outline: none;
+  cursor: pointer;
   cursor: pointer; }
   .slider__arrow:before {
     content: "";

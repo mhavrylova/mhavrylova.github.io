@@ -15,60 +15,23 @@ $icon_color:#5d5f5f;
 $link_hover:red;
 $black:#000;
 $search:#c0c4c8;
-
-
-@mixin text_1 ($size, $color) {
-  font-family:'HelveticaNeueLTStd-It';
-  font-size: $size;
-  color:$color;
-}
-
-@mixin text_2 ($size, $color) {
-  font-family:'HelveticaNeueLTStd-Lt';
-  font-size: $size;
-  color:$color;
-}
-
-@mixin text_3 ($size, $color) {
-  font-family:'HelveticaNeueLTStd-Md';
-  font-size: $size;
-  color:$color;
-}
-
-@mixin text_4 ($size, $color) {
-  font-family:'HelveticaNeueLTStd-Th';
-  font-size: $size;
-  color:$color;
-}
-
-@mixin text_5 ($size, $color) {
-  font-family:'HelveticaNeueLTStd-ThIt';
-  font-size: $size;
-  color:$color;
-}
-
-@mixin text_6 ($size, $color) {
-  font-family:'HelveticaNeueLTStd-UltLt';
-  font-size: $size;
-  color:$color;
-}
-
-@mixin text_7 ($size, $color) {
-  font-family:'PFDinTextCompPro-Thin';
-  font-size: $size;
-  color:$color;
-}
-
 $tablet: "(min-width: 768px) and (max-width: 1023px)";
 $desktop: "(min-width: 1024px)";
 
-
-
-
-@media #{$tablet} {
-
+@mixin icon($content, $size, $color) {
+  &:before {
+  content: $content;
+  font-family: $global-font-icon;
+  font-size: $size;
+  color: $color;
+  display: inline-block;
+  }
 }
 
-@media #{$desktop} {
-
+@mixin button_unstyle() {
+    background-color: rgba(0,0,0,0);
+    border: none;
+    padding: 0;
+    outline: none;
+    cursor: pointer;    
 }
