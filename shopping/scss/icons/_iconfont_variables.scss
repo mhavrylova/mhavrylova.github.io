@@ -1,0 +1,50 @@
+@font-face {
+  font-family: $global-font-icon;
+  src:url("../fonts/myicons..eot");
+  src:url("../fonts/myicons.?#iefix") format("embedded-opentype"),
+    url("../fonts/myicons.woff") format("woff"),
+    url("../fonts/myicons.ttf") format("truetype"),
+    url("../fonts/myicons.#myicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+$icon-arrow_down: "\EA01" !default;
+
+$icon-arrow_left: "\EA02" !default;
+
+$icon-arrow_right: "\EA03" !default;
+
+$icon-bag: "\EA04" !default;
+
+$icon-bag_big: "\EA05" !default;
+
+$icon-credit_card: "\EA06" !default;
+
+$icon-heart: "\EA07" !default;
+
+$icon-magnifier: "\EA08" !default;
+
+$icon-magnifier_th: "\EA09" !default;
+
+$icon-mail: "\EA0A" !default;
+
+$icon-marker_drop: "\EA0B" !default;
+
+$icon-soc_facebook: "\EA0C" !default;
+
+$icon-soc_google: "\EA0D" !default;
+
+$icon-soc_instagram: "\EA0E" !default;
+
+$icon-soc_pinterest: "\EA0F" !default;
+
+$icon-soc_twitter: "\EA10" !default;
+
+
+.icon {
+  &:before, &:after {
+    font-family: $global-font-icon
+  }
+}
