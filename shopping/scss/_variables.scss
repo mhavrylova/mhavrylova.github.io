@@ -16,7 +16,9 @@ $link_hover:red;
 $black:#000;
 $search:#c0c4c8;
 $tablet: "(min-width: 768px) and (max-width: 1023px)";
+$tablet_footer: "(min-width: 768px) and (max-width: 1161px)";
 $desktop: "(min-width: 1024px)";
+
 
 @mixin icon($content, $size, $color) {
   &:before {
