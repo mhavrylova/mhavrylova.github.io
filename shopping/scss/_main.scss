@@ -6,6 +6,15 @@
 }
 
 
+html { 
+	height:100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
 a, a:hover, a:active, a:visited, a:focus {
 	color: inherit;
@@ -14,6 +23,12 @@ a, a:hover, a:active, a:visited, a:focus {
 
 body {
 	font-family:'HelveticaNeueLTStd-Lt';
+	height: 100%;
+}
+
+
+.content {
+  flex: 1 0 auto;
 }
 
 .header-top {
@@ -808,10 +823,12 @@ body {
 		}	
 }
 
+
+
 footer {
 	margin-top: 80px;
 	border-top: 1px solid $hr_color;
-	margin-bottom: 83px;
+	flex: 0 0 auto;
 }
 
 .footer-top {

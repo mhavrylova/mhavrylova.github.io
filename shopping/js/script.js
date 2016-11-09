@@ -27,6 +27,9 @@ $("#slider").owlCarousel({
    $("#slider").trigger('owl.prev');
   }) //step "next" for element .slider__arrow_left
 
+document.getElementById("send-email").addEventListener("click", function(event){
+    event.preventDefault()
+});
 
 });
 
