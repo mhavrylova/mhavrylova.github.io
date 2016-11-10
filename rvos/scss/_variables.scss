@@ -1,0 +1,24 @@
+$header_bg:#212121;
+$nav_hover:#f3df66;
+$white:#fff;
+$welcome_bg:#3c673c;
+$title_col:#b8b4ac;
+$main_text_col:#2d2c29;
+$button_bg:#2f2f2f;
+$footer_text:#2f2f2f;
+$block_border:#3c673c;
+$address_bg:#f3df66;
+$block_title:#9e998e;
+$main_text:'Helvetica Ce Regular';
+$title_text:'Helvetica Ce Bold';
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$mobile: "(max-width: 767px)";
+$all_small: "(max-width: 1023px)";
+
+@mixin button_unstyle() {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    outline: none;
+    cursor: pointer;    
+}
