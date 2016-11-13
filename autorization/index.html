@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>M.Havrylova Test</title>
+	<link rel="stylesheet" href="dist/normalize.css"> 
+	<link rel="stylesheet" href="dist/font-awesome.min.css">
+ 	<link rel="stylesheet" href="dist/style.css">
+</head>
+
+
+
+<body>
+	<header>
+		<nav>
+			<ul class="menu navigation">
+				<li class="menu__item navigation__item">
+					<a href="#">Главная</a>
+				</li>
+				<li class="menu__item navigation__item">
+					<a href="#">Мои покупки</a>
+				</li>
+				<li class="menu__item navigation__item">
+					<a href="#">Контакты</a>
+				</li>
+				<li class="menu__item navigation__item">
+					<a href="#">Доставка</a>
+				</li>
+				<li class="menu__item navigation__item">
+					<a href="#">Войти/Выйти</a>
+				</li>	
+			</ul>
+			<button id="menu-button" class="menu-button fa fa-bars"></button>
+			<button id="menu-close-button" class="menu-close-button fa fa-window-close-o"></button>
+		</nav>
+	</header>
+	<div class="content">
+		<div class="autorization">
+			<div class="autorization__header">
+				<h1 class="autorization__title">
+					Авторизация
+				</h1>
+				<a href="#" class="autorization__registration server-action">
+					Зарегистрироваться
+				</a>
+			</div>
+			<form action="#" class="autorization__form">
+			    <label for="email" class="input__name">Email</label>
+			    <input id="email" class="autorization__input input" type="email" value="" name="email" placeholder=""><br>
+			    <label for="password" class="input__name">Пароль</label>
+			    <input id="password" class="autorization__input autorization__input_next input" type="password" value="" name="password" placeholder=""><br>
+			    <div class="autorization__custom">
+					<label class="remember-check">
+						<input type="checkbox" id="cbox1" class="remember-check__input" value="remember" checked="checked"> Запомнить меня
+					</label>
+					<div class="autorization__forget-pswrd forget-pswrd">
+						<span class="forget-pswrd__question">Забыли пароль?</span>
+						<a href="#" class="server-action">Возобновить</a>
+					</div>			    	
+			    </div>
+			    <button type="submit" class="autorization__button button">Вход
+			    </button>
+			</form>
+		</div>
+	</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/script.js"></script>
+</body>

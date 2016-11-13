@@ -1,0 +1,23 @@
+$badge:#f62c06;
+$button:#0b3f0f;
+$asterisk:#8f5251;
+$title_color:#131a20;
+$label_color:#4b4b4b;
+$question:#878787;
+$action:#4f7159;
+$border:#cac6c7;
+$white:#fff;
+$input_border:#ededed;
+$gradient_1:#f4eeee;
+$gradient_2:#f7f7f5;
+$gradient_3:#fff;
+$hover:#8f5251;
+$button_hover:rgba(11,63,15,0.5);
+$gradient: linear-gradient(to bottom, 
+		$gradient_1 0%,
+		$gradient_2 21%,
+		$gradient_3 49%,
+		$gradient_2 80%,
+		$gradient_1 100%
+	);
+$mobile: "(max-width: 767px)";
