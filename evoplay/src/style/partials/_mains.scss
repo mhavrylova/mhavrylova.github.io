@@ -203,3 +203,13 @@ body {
 		}	
 	}
 }
+
+.faq {
+	color: $white;
+	li {
+		margin-bottom: 20px;
+	}
+	p {
+		color: red;
+	}
+}
