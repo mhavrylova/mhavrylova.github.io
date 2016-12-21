@@ -36,7 +36,7 @@ body {
 	font-family: $font-select;
 	background-color:$select_bg;
 	position: relative;
-	background-image: url(/img/arrow.png);
+	background-image: url(../img/arrow.png);
 	background-position: 90% center;
  	background-repeat: no-repeat;
  	border-radius: 3px;
@@ -106,7 +106,7 @@ body {
 	    0 0 0 7px $select_border_3,
 	    0 0 0 9px $select_border_4,
 	    0 0 0 11px $select_border_5;
-	text-shadow: 0px 1px 5px #000;
+	text-shadow: $text-shadow;
 }
 
 .button:hover {
@@ -123,25 +123,27 @@ body {
 		&-wrapper {
 		display: flex;
 		justify-content:center;
-		margin-top: 20px;
+		margin-top: 60px;
 		}
 	display: flex;
 	padding: 7px;
-	background: $select_gradient;
+	background: $paging_gradient;
 	border-radius: 20px;
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: $font_main2;
 	font-weight: bold;
 	font-size: 18px;
+	color:$page_number-color;
+	text-shadow: $text-shadow;
 	&__number {
-		margin-left: 8px;
+		margin-left: 10px;
     	width: 20px;
     	height: 20px;
     	border-radius: 20px;
     	display: flex;
     	align-items: center;
     	justify-content: center;
-    	background-color: #112144;
-    	    box-shadow: 0 0 0 1px #152b50,0 0 0 3px #0d192c;
+    	background-color:$page_number-bg;
+    	box-shadow: 0 0 0 1px $page_number-border1,0 0 0 3px $page_number-border2;
 			&:first-child {
 				margin-left: 0;
 			}
