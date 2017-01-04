@@ -1028,6 +1028,20 @@ Javascript disabled
   background-position: 32px 2px;
   background-repeat: no-repeat; }
 
+.laptop_pic--7 {
+  background-image: url(../images/pr_7.jpg);
+  -webkit-background-size: 158px 99px;
+          background-size: 158px 99px;
+  background-position: 32px 7px;
+  background-repeat: no-repeat; }
+
+.laptop_pic--8 {
+  background-image: url(../images/pr_8.jpg);
+  -webkit-background-size: 158px 99px;
+          background-size: 158px 99px;
+  background-position: 32px 7px;
+  background-repeat: no-repeat; }
+
 /*# sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=style.css.map */
