@@ -26,13 +26,13 @@ body {
 	background-repeat: no-repeat;
 	transition: .5s ease-in-out;
 	&_1 {
-		background-image: url(/img/slide1.jpg);
+		background-image: url(../img/slide1.jpg);
 	}
 	&_2 {
-		background-image: url(/img/slide2.jpg);
+		background-image: url(../img/slide2.jpg);
 	}
 	&_3 {
-		background-image: url(/img/slide3.jpg);
+		background-image: url(../img/slide3.jpg);
 	}		
 
 }
@@ -136,7 +136,7 @@ nav {
 	&__top {
 		margin: 0;
 		padding: 30px $paddingContactLeft;
-		background-image: url(/img/contact-top.jpg);
+		background-image: url(../img/contact-top.jpg);
 		background-size: cover;
 		background-repeat: no-repeat;		
 	}
