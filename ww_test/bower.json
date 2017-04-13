@@ -1,0 +1,22 @@
+{
+  "name": "project",
+  "description": "",
+  "authors": [
+    "MH"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+   "dependencies": {
+    "normalize.css": "*",
+    "jquery": "3.*",
+    "bootstrap": "3.*"
+  } 
+}
+
