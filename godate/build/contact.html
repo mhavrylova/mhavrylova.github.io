@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<title>Avto+ Contacts</title>
+ 	<link rel="stylesheet" href="css/main.css"> 	
+</head>
+
+
+
+<body>
+<div class="container">	
+	<div id="wrap" class="wrapper">
+		<header>
+		<div class="header header__top">
+			<a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+			<div class="header-responsive__buttons">
+				<button id="phone-menu" class="button-response icon-telephone"></button>
+				<button id="nav-menu" class="button-response icon-menu"></button>	
+			</div>
+		
+			<nav class="menu-main">
+				<ul class="menu">
+					<li class="menu__link"><a href="index.html">О нас</a></li>
+					<li class="menu__link"><a href="#">Услуги</a></li>
+					<li class="menu__link"><a href="#">Автопарк</a></li>
+					<li class="menu__link"><a href="#">Фотогалерея</a></li>
+					<li class="menu__link"><a href="contact.html">Контакты</a></li>
+				</ul>
+			</nav>
+		
+		</div>
+		
+		
+		<div id="headBot" class="header header__bottom">
+			<div class="header__social"><a href="#" class="icon-fb"></a></div>
+			<div class="header__contacts">
+				<span>Телефон</span>
+				<a href="tel:+380313154350">+38 03131 54350</a>
+				<a href="tel:+380313154650">+38 03131 54650</a>
+				<a href="tel:+380313154860">+38 03131 54860</a>
+			</div>
+			<div class="header__contacts">
+				<span>E-mail</span>
+				<a href="mailto:avtoplus@ltd.com.ua">avtoplus@ltd.com.ua</a>
+			</div>
+			<div id="headLan" class="header__languages">
+				<ul class="choose-language">
+					<li class="choose-language__lang"><a href="#">ru</a></li>
+					<li class="choose-language__lang"><a href="#">en</a></li>
+					<li class="choose-language__lang"><a href="#">de</a></li>
+				</ul>
+			</div>
+		</div>
+		
+			<nav id="m-menu" class="menu-main_responsive">
+				<ul class="menu">
+					<li class="menu__link"><a href="index.html">О нас</a></li>
+					<li class="menu__link"><a href="#">Услуги</a></li>
+					<li class="menu__link"><a href="#">Автопарк</a></li>
+					<li class="menu__link"><a href="#">Фотогалерея</a></li>
+					<li class="menu__link"><a href="contact.html">Контакты</a></li>
+				</ul>
+					<div id="headLan" class="header__languages">
+				<ul class="choose-language">
+					<li class="choose-language__lang"><a href="#">ru</a></li>
+					<li class="choose-language__lang"><a href="#">en</a></li>
+					<li class="choose-language__lang"><a href="#">de</a></li>
+				</ul>
+			</div>
+			</nav>
+		
+		</header>
+
+		<div class="content content__contact">
+			<div class="content__top">
+				<h1 class="page-title">Контакты</h1>
+				<nav class="page-nav">
+					<ul class="page-menu">
+						<li class="page-menu__item"><a href="index.html">Главная</a></li>
+						<li class="page-menu__item"><a href="contact.html">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="content__main">
+				<div class="content__info">
+					<h2>Главный офис</h2>
+					<h3 class="icon icon-pin">Адрес</h3>
+						<address>
+							89600 Украина, Закарпатская обл.,<br> г.Мукачево, ул. Мира 57
+						</address>
+					<h3 class="icon icon-home">Юридический адрес</h3>
+						<address>
+							Украина, Закарпатская обл.,<br>
+							г.Мукачево, ул. Мира 57
+						</address>
+					<h3 class="icon icon-phone">Телефон</h3>
+						<a href="tel:+380313154350">+38 03131 54350</a><br>
+						<a href="tel:+380313154650">+38 03131 54650</a><br>
+						<a href="tel:+380313154860">+38 03131 54860</a>
+					<h3 class="icon icon-envelope">E-mail</h3>
+						<a href="mailto:avtoplus@ltd.com.ua">avtoplus@ltd.com.ua</a>
+				</div>
+				<div class="content__map">
+					<h2>Мы на карте</h2>
+					<div id="map_div" class="map"></div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+
+
+	<footer id="pageFooter" class="foot">
+	<span>© 2017 AVTOPLUS LTD. Все права защищены.</span> <span>Розробка сайту - &nbsp;<a href="#"><img src="img/madeBylogo.png" alt="madeBy"></a></span>
+	</footer>
+
+</div>	<!-- container -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSfNsZcUnY8cMH3oNbh_wjy_vX3-6LnxY&callback=initMap">
+    </script>
+<script src="js/main.js"></script>
+
+</body>
