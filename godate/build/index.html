@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Godate - Home</title>
+	<title>GoDateNow - Home</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
  	<link rel="stylesheet" href="css/main.css"> 	
 </head>
@@ -10,16 +10,6 @@
 
 
 <body>
-<div id="fb-root"></div>
-<script>
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/uk_UA/sdk.js#xfbml=1&version=v2.9";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
 <div class="container">	
 		<header>
 		<div class="header-login">
@@ -49,7 +39,7 @@
 		<h1><img src="img/top-text.png" alt="meetyourdream"></h1>
 		<div class="wrapper">
 			<div class="registration">
-				<form id="theForm" action="">
+				<form id="the-form" action="">
 					<div class="form__field"><input id="form_name" type="text" name="Name" placeholder="Name"></div>
 					<div class="form__field"><select id="form_country">
 						<option value="0">Country</option>
@@ -285,21 +275,23 @@
 				<div class="form__field">
 					<input id="form_password" type="password" name="Password" placeholder="Password">
 				</div>	
-					<input id="form_submit" type="submit" value="Register" class="registration__submit">
+				<div class="form__field">
+					<input id="form_submit" type="submit" value="Register" class="submit__button submit__button_registration" onclick="event.preventDefault(); validate(this.form)">
+				</div>	
+				<div class="form__field">
 					<input id="isadult" type="checkbox" name="isadult">
 					<label for="isadult">
 						<span>
 							I agree to the <a href="#">terms and conditions</a> and <a href="#">Privacy Policy</a> and certify that I am at least 18 years of age	
 						</span>
-		
 					</label>
+				</div>
 				</form>
-					
-					<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>	
-					<div>
-						<button class="facebook__submit">Sign in with Facebook</button>
-					</div>			
-					<a class="secure-link" target="_blank" href="https://www.mcafeesecure.com/verify?host=godatenow.com"><img src="img/secure.gif" alt="secure"></a>
+				<div class="form__field">
+					<button class="submit__button submit__button_facebook">Sign in with Facebook</button>
+				</div>
+				<a class="secure-link" target="_blank" href="https://www.mcafeesecure.com/verify?host=godatenow.com"><img src="img/secure.gif" alt="secure"></a>
+			</div>			
 
 
 

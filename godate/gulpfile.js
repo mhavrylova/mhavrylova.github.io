@@ -50,7 +50,7 @@ var config = {
     tunnel: true,
     host: 'localhost',
     port: 9000,
-    reloadDelay: 5000,
+    reloadDelay: 1000,
     logPrefix: "Frontend_Devil"
 };
 
