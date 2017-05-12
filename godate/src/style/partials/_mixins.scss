@@ -12,3 +12,11 @@
 	left:50%;
 	transform:translate(-50%,-50%);
 }
+
+@mixin triangleLeft($size, $color) {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: $size $size $size 0;
+    border-color: transparent $color transparent transparent;
+}
