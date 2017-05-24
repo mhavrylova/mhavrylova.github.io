@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">	 -->
+	<title>Before-After Slider</title>
+ 	<link rel="stylesheet" href="css/main.css"> 	
+</head>
+
+
+
+<body>
+
+<div class="content">
+	<header>
+	
+	<div class="mac-ui">
+		<button id="close" class="button button__mac button__mac_close"></button>
+		<button id="minimize" class="button button__mac button__mac_minimize"></button>
+		<button id="resize" class="button button__mac button__mac_resize"></button>
+	</div>
+	
+	<div class="wrapper">
+		<button class="button button__regular button__regular_activity">+ Load Photo</button>
+		<div>
+			<button class="button button__options button__options_text active">fit</button>
+			<button class="button button__options button__options_text">100%</button>		
+		</div>
+		<div>
+			<button class="button button__options icon icon__eye"></button>
+			<button class="button button__options halfs"></button>		
+		</div>
+		<button class="button button__options icon icon__cut"></button>	
+		<div>
+			<button class="button button__options icon icon__upload"></button>	
+			<button class="button button__options icon icon__facebook"></button>		
+		</div>
+				
+	</div>
+	
+	<button class="button button__regular button__regular_main">Export</button>
+	
+	</header>
+	<section>
+			<div class="wrapper photo-viewer">
+				<div class="photo-viewer__picture">
+					<img src="img/cat_2.jpg" alt="">
+				</div>
+				<div class="photo-viewer__separator"></div>
+				<div class="photo-viewer__before"></div>
+			</div>
+	</section>
+	<div class="pannel">
+		<button class="button button__select icon icon__arrow-down"></button>
+		<div class="pannel pannel__wrapper">
+			<div class="slider-bar slider-bar-position">
+				<span class="slider-bar__text">Realistic</span>
+				<div class="slider-bar__empty-position slider-bar__empty">
+					<div class="slider-bar__button"></div>
+				</div>
+				<span class="slider-bar__text">Vivid</span>
+			</div>
+			<button id="apply_to_all" class="button button__regular button__regular_main">Apply to All</button>	
+		</div>
+
+	</div>
+	<section>
+		<div class="wrapper mini-pic">
+			<div class="mini-pic__picture mini-pic-position">
+				<img src="img/cat_1.jpg" alt="cat_1">
+			</div>
+			<div class="mini-pic__picture mini-pic__picture_active mini-pic-position">
+				<img src="img/cat_2.jpg" alt="cat_2">				
+			</div>
+			<div class="mini-pic__picture mini-pic-position">
+				<img src="img/cat_3.jpg" alt="cat_3">	
+			</div>
+			<div class="mini-pic__picture mini-pic-position">
+				<img src="img/cat_4.jpg" alt="cat_4">				
+			</div>
+		</div>
+	</section>
+
+</div>
+
+
+
+
+
+
+
+
+<script src="js/main.js"></script>
+
+</body>
