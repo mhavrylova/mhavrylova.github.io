@@ -25,7 +25,6 @@ button {
 	display: table;
 	height: 0;
 	clear: both;
-	color: $grey;
 	font-family: $mainFont;	
 }
 
@@ -43,7 +42,6 @@ button {
 .wrapper {
 	width: 1200px;
 	margin: auto;
-
 	@include tablet-landscape-and-below {
 	 	max-width: 95%;
 	}
@@ -83,21 +81,25 @@ header {
     color: $head-text;
 }
 
-.logo {
-	font-family: $logoFont;
-	span {
-		color: $blue;
-	}
-}
+
 
 .description {
 	padding: 20px 0;
 }
 
 section {
-	margin-top: 20px;
-	padding: 20px 0;
+	padding: 20px;
+	flex-grow: 1;
+	max-width: 49%;
+	border: 2px solid $light-text;
+	border-radius: 10px;
 }
 .description {
 	font-weight: 300;
+}
+
+.main-info {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 60px;
 }
