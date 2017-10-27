@@ -1,14 +1,39 @@
+
+$( document ).ready(function() {
+   
+if ($(window).width() <= 1220) {
+   var sectionWidth = $('section').width();
+   var imgCarousel = $('.carousel__item');
+   $(imgCarousel).width(sectionWidth);
+}
+
+
+});
+
+$( window ).resize(function() {
+  if ($(window).width() <= 1220) {
+   var sectionWidth = $('section').width();
+   var imgCarousel = $('.carousel__item');
+   $(imgCarousel).width(sectionWidth);
+}
+});
+
+
+
 var navButton = $(".carousel__button");
 navButton.on('click', function(){
-        var count = 4,
+
+
+
+        var count = 1,
             thisId =  $(this).attr("data-name"),
             carousel = $("#"+thisId),
             list = $(carousel).find('.carousel__box'),
             position = parseInt($(list).css("marginLeft")),
             listElems = $(carousel).find('.carousel__item'),
-            margin = (carousel.outerWidth() - listElems.outerWidth() * count) / count,
-            width = listElems.outerWidth() + margin,            
-            maxStep = listElems.length * listElems.outerWidth() * -1,
+            margin = (carousel.width() - listElems.width() * count) / count,
+            width = listElems.width() + margin,            
+            maxStep = listElems.length * listElems.width() * -1,
             minStep = 0;
         if ($(this).hasClass('navigation-button-right')) {
             position = position - width * count;            
