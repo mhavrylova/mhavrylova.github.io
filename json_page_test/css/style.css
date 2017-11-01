@@ -268,50 +268,50 @@ footer {
     .languagues__item:hover {
       border-color: #232323; }
     .languagues__item_en {
-      background-image: url(/img/sprites/sprite.png);
+      background-image: url(../img/sprites/sprite.png);
       background-position: 0px -16px;
       width: 24px;
       height: 16px; }
       .languagues__item_en:hover {
-        background-image: url(/img/sprites/sprite.png);
+        background-image: url(../img/sprites/sprite.png);
         background-position: 0px 0px;
         width: 24px;
         height: 16px; }
       .languagues__item_en-active {
         border-color: #232323;
-        background-image: url(/img/sprites/sprite.png);
+        background-image: url(../img/sprites/sprite.png);
         background-position: 0px 0px;
         width: 24px;
         height: 16px; }
     .languagues__item_fr {
-      background-image: url(/img/sprites/sprite.png);
+      background-image: url(../img/sprites/sprite.png);
       background-position: -24px -16px;
       width: 24px;
       height: 16px; }
       .languagues__item_fr:hover {
-        background-image: url(/img/sprites/sprite.png);
+        background-image: url(../img/sprites/sprite.png);
         background-position: -24px 0px;
         width: 24px;
         height: 16px; }
       .languagues__item_fr-active {
         border-color: #232323;
-        background-image: url(/img/sprites/sprite.png);
+        background-image: url(../img/sprites/sprite.png);
         background-position: -24px 0px;
         width: 24px;
         height: 16px; }
     .languagues__item_de {
-      background-image: url(/img/sprites/sprite.png);
+      background-image: url(../img/sprites/sprite.png);
       background-position: -23px -32px;
       width: 23px;
       height: 16px; }
       .languagues__item_de:hover {
-        background-image: url(/img/sprites/sprite.png);
+        background-image: url(../img/sprites/sprite.png);
         background-position: 0px -32px;
         width: 23px;
         height: 16px; }
       .languagues__item_de-active {
         border-color: #232323;
-        background-image: url(/img/sprites/sprite.png);
+        background-image: url(../img/sprites/sprite.png);
         background-position: 0px -32px;
         width: 23px;
         height: 16px; }
