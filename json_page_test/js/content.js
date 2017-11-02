@@ -88,34 +88,61 @@ $.ajax({
     	var columnWidthPx = tableWidht/count;
     	var columnWidthPer = columnWidthPx/tableWidht*100 + '%'; //width for column according to count of columns
   	
-
+		count = 0;
 		$.each(data[0], function(index, element) {
-			var column = $('<div class="table__data table__data_header">'+index+'</div>');
+			var column = $('<div class="table__data table__data_header" data-column="' + ++count + '">'+index+'</div>');
 			column.width(columnWidthPer);
 			$(column).appendTo($(newRow));
     	});
+    	$(newRow).addClass('table__row_header');
 		newRow.appendTo($('#table-to-draw')); //building the header row
-		
+		var tableBody = $('<div class="table__body"></div>');
+		$(tableBody).appendTo($('#table-to-draw'));
 		
 		$.each(data, function(index, element) {
 			var newRow = $('<div class="table__row"></div>');
 			$(newRow).attr("id",element.ID);
+			count = 0;
 			$.each(element, function(ind, elem) {
 				var column;
-		 		if (elem == null) {
-					column = $('<div class="table__data">no data</div>');
-				} else if (elem != null && elem.toString().indexOf("png") != -1 || elem != null && elem.toString().indexOf("jpg") != -1  || elem != null && elem.toString().indexOf("bmp") != -1 ) {
-						var image = $('<img src="'+elem+'" alt="user-'+element.ID+'-picture">');
-						column = $('<div class="table__data"></div>');
-						$(image).appendTo($(column));
+
+				if (typeof elem != "number") {
+			 		if (elem == null) {
+						column = $('<div class="table__data" data-column="' + ++count + '" data-type="string">no data</div>');
+					} else if (elem.toString().indexOf("png") != -1 || elem.toString().indexOf("jpg") != -1  || elem.toString().indexOf("bmp") != -1 ) {
+							var image = $('<img src="'+elem+'" alt="user-'+element.ID+'-picture">');
+							column = $('<div class="table__data" data-column="' + ++count + '" data-type="string"></div>');
+							$(image).appendTo($(column));
+					} else {
+						column = $('<div class="table__data" data-column="' + ++count + '" data-type="string">'+elem+'</div>');		
+					}					
 				} else {
-					column = $('<div class="table__data">'+elem+'</div>');		
+			 		if (elem == null) {
+						column = $('<div class="table__data" data-column="' + ++count + '" data-type="number">no data</div>');
+					} else if (elem.toString().indexOf("png") != -1 || elem.toString().indexOf("jpg") != -1  || elem.toString().indexOf("bmp") != -1 ) {
+							var image = $('<img src="'+elem+'" alt="user-'+element.ID+'-picture">');
+							column = $('<div class="table__data" data-column="' + ++count + '" data-type="number"></div>');
+							$(image).appendTo($(column));
+					} else {
+						column = $('<div class="table__data" data-column="' + ++count + '" data-type="number">'+elem+'</div>');		
+					}					
 				}
+
+		 	// 	if (elem == null) {
+				// 	column = $('<div class="table__data" data-column="' + ++count + '">no data</div>');
+				// } else if (elem.toString().indexOf("png") != -1 || elem.toString().indexOf("jpg") != -1  || elem.toString().indexOf("bmp") != -1 ) {
+				// 		var image = $('<img src="'+elem+'" alt="user-'+element.ID+'-picture">');
+				// 		column = $('<div class="table__data" data-column="' + ++count + '"></div>');
+				// 		$(image).appendTo($(column));
+				// } else {
+				// 	column = $('<div class="table__data" data-column="' + ++count + '">'+elem+'</div>');		
+				// }
 				column.width(columnWidthPer);
 				$(column).appendTo($(newRow));
-				$(newRow).appendTo($('#table-to-draw'));				
+				$(newRow).appendTo($(tableBody));
 			})
     	});  //building the table rows
+    	addSorter();
 	},
 
 	error: function(){
@@ -124,3 +151,43 @@ $.ajax({
 		var errorTex = $('<div class="error">Error</div>').appendTo($('.wrapper'));
 	}
 });
+
+
+
+function addSorter() {
+	var tableToSort = document.getElementById('table-to-draw');
+	var tableToSortBody = tableToSort.querySelector(".table__body");
+
+	tableToSort.addEventListener('click', function(e) {
+		var columnToCheck = e.target; //ячейка, на которую нажали (td)
+		var dataClass = columnToCheck.className; //класс ячейки, на которую нажали (td class)
+		var headerClass = 'table__data table__data_header'; //класс-идентификатор ячейки-хедера таблицы (th class)
+		var columnToCheckNumber = columnToCheck.getAttribute("data-column"); //номер колонки, на которую нажали
+		var columnsToFind = tableToSortBody.getElementsByClassName("table__data"); //все ячейки в бади таблицы (массив с td)
+
+		if (dataClass != headerClass) {
+			return;
+		} //если нажали не на ячейку-хедер, то игнор (th)
+		
+		for(var i = 0; i < columnsToFind.length; i++){ //проганяем все ячейки тела таблицы (td)
+			var checkedCell = columnsToFind[i]; //ячейка, которая проганяется в данной итерации (td)
+			var columnsToCheckNumber = checkedCell.getAttribute("data-column"); //узнаем номер колонки проганяемой ячейки
+			var dataType = checkedCell.getAttribute("data-type"); //узнаем тип данных проганяемой ячейки	
+				
+				if(columnsToCheckNumber == columnToCheckNumber){ //если проганяемая ячейка относится к колонке, по которой кликнули
+					var dataToSort = checkedCell.innerHTML; //содержимое ячейки для сортировки (td THML)
+					var wholeRow = checkedCell.parentNode; //вся строка в которой находится эта ячейка (tr)
+		
+					 
+
+				}
+		}
+
+
+
+
+
+		
+	});
+
+}
