@@ -155,8 +155,21 @@ $.ajax({
 
 
 function addSorter() {
-	var tableToSort = document.getElementById('table-to-draw');
-	var tableToSortBody = tableToSort.querySelector(".table__body");
+	var tableToSort = document.getElementById('table-to-draw'); //table
+	var tableToSortBody = tableToSort.querySelector(".table__body"); //tbody
+
+	function compare(a,b) {
+	  if (a.innerHTML < b.innerHTML)
+	    return -1;
+	  if (a.innerHTML > b.innerHTML)
+	    return 1;
+	  return 0;
+	}
+
+	function compareNumber(a,b) {
+	 	return a.innerHTML - b.innerHTML
+
+	}	
 
 	tableToSort.addEventListener('click', function(e) {
 		var columnToCheck = e.target; //ячейка, на которую нажали (td)
@@ -164,6 +177,9 @@ function addSorter() {
 		var headerClass = 'table__data table__data_header'; //класс-идентификатор ячейки-хедера таблицы (th class)
 		var columnToCheckNumber = columnToCheck.getAttribute("data-column"); //номер колонки, на которую нажали
 		var columnsToFind = tableToSortBody.getElementsByClassName("table__data"); //все ячейки в бади таблицы (массив с td)
+		var tableRows = tableToSortBody.getElementsByClassName("table__row"); //массив из tr
+		var arrToSort = [];
+		var arrToSortNum = [];
 
 		if (dataClass != headerClass) {
 			return;
@@ -172,22 +188,35 @@ function addSorter() {
 		for(var i = 0; i < columnsToFind.length; i++){ //проганяем все ячейки тела таблицы (td)
 			var checkedCell = columnsToFind[i]; //ячейка, которая проганяется в данной итерации (td)
 			var columnsToCheckNumber = checkedCell.getAttribute("data-column"); //узнаем номер колонки проганяемой ячейки
-			var dataType = checkedCell.getAttribute("data-type"); //узнаем тип данных проганяемой ячейки	
+			var dataType = checkedCell.getAttribute("data-type"); //узнаем тип данных проганяемой ячейки
+			var dataToSort = checkedCell.innerHTML; //содержимое ячейки для сортировки (td THML)
+			var wholeRow = checkedCell.parentNode; //вся строка в которой находится эта ячейка (tr)				
 				
 				if(columnsToCheckNumber == columnToCheckNumber){ //если проганяемая ячейка относится к колонке, по которой кликнули
-					var dataToSort = checkedCell.innerHTML; //содержимое ячейки для сортировки (td THML)
-					var wholeRow = checkedCell.parentNode; //вся строка в которой находится эта ячейка (tr)
-		
-					 
-
+						if (dataType == "number") {
+							arrToSortNum.push(checkedCell);
+						} else {
+							arrToSort.push(checkedCell);							
+						}
 				}
 		}
 
+			tableToSortBody.innerHTML='';
 
+			if(arrToSortNum.length >= 1) {
+				arrToSortNum.sort(compareNumber);
 
+				for(var i = 0; i < arrToSortNum.length; i++) {
+		 			tableToSortBody.appendChild(arrToSortNum[i].parentNode);
+		    	}
+			} else {
+				arrToSort.sort(compare);
 
-
-		
+				for(var i = 0; i < arrToSort.length; i++) {
+		 			tableToSortBody.appendChild(arrToSort[i].parentNode);
+		    	}				
+			}
+	
 	});
 
 }
