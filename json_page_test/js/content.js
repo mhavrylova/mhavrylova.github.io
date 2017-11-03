@@ -84,9 +84,9 @@ $.ajax({
 		$.each(data[0], function(index, element) {
 			count++;
     	});
-    	var tableWidht = $("#table-drow").width();
-    	var columnWidthPx = tableWidht/count;
-    	var columnWidthPer = columnWidthPx/tableWidht*100 + '%'; //width for column according to count of columns
+    	var tableWidht = $("#table-drow").width(),
+    		columnWidthPx = tableWidht/count,
+    		columnWidthPer = columnWidthPx/tableWidht*100 + '%'; //width for column according to count of columns
   	
 		count = 0;
 		$.each(data[0], function(index, element) {
@@ -127,16 +127,6 @@ $.ajax({
 						column = $('<div class="table__data" data-column="' + ++count + '" data-type="number">'+elem+'</div>');		
 					}					
 				}
-
-		 	// 	if (elem == null) {
-				// 	column = $('<div class="table__data" data-column="' + ++count + '">no data</div>');
-				// } else if (elem.toString().indexOf("png") != -1 || elem.toString().indexOf("jpg") != -1  || elem.toString().indexOf("bmp") != -1 ) {
-				// 		var image = $('<img src="'+elem+'" alt="user-'+element.ID+'-picture">');
-				// 		column = $('<div class="table__data" data-column="' + ++count + '"></div>');
-				// 		$(image).appendTo($(column));
-				// } else {
-				// 	column = $('<div class="table__data" data-column="' + ++count + '">'+elem+'</div>');		
-				// }
 				column.width(columnWidthPer);
 				$(column).appendTo($(newRow));
 				$(newRow).appendTo($(tableBody));
@@ -155,8 +145,8 @@ $.ajax({
 
 
 function addSorter() {
-	var tableToSort = document.getElementById('table-to-draw'); //table
-	var tableToSortBody = tableToSort.querySelector(".table__body"); //tbody
+	var tableToSort = document.getElementById('table-to-draw'), //table
+		tableToSortBody = tableToSort.querySelector(".table__body"); //tbody
 
 	function compare(a,b) {
 	  if (a.innerHTML < b.innerHTML)
@@ -172,48 +162,43 @@ function addSorter() {
 	}	
 
 	tableToSort.addEventListener('click', function(e) {
-		var columnToCheck = e.target; //ячейка, на которую нажали (td)
-		var dataClass = columnToCheck.className; //класс ячейки, на которую нажали (td class)
-		var headerClass = 'table__data table__data_header'; //класс-идентификатор ячейки-хедера таблицы (th class)
-		var columnToCheckNumber = columnToCheck.getAttribute("data-column"); //номер колонки, на которую нажали
-		var columnsToFind = tableToSortBody.getElementsByClassName("table__data"); //все ячейки в бади таблицы (массив с td)
-		var tableRows = tableToSortBody.getElementsByClassName("table__row"); //массив из tr
-		var arrToSort = [];
-		var arrToSortNum = [];
+		var columnToCheck = e.target, //licked(td)
+			dataClass = columnToCheck.className, //clicked td class
+			headerClass = 'table__data table__data_header', //class to identificate th
+			columnToCheckNumber = columnToCheck.getAttribute("data-column"), //clicked td column number
+			columnsToFind = tableToSortBody.getElementsByClassName("table__data"), //all td in tbody
+			arrToSort = [],
+			arrToSortNum = [];
 
 		if (dataClass != headerClass) {
 			return;
-		} //если нажали не на ячейку-хедер, то игнор (th)
+		} //if clicked not to th, ignore
 		
-		for(var i = 0; i < columnsToFind.length; i++){ //проганяем все ячейки тела таблицы (td)
-			var checkedCell = columnsToFind[i]; //ячейка, которая проганяется в данной итерации (td)
-			var columnsToCheckNumber = checkedCell.getAttribute("data-column"); //узнаем номер колонки проганяемой ячейки
-			var dataType = checkedCell.getAttribute("data-type"); //узнаем тип данных проганяемой ячейки
-			var dataToSort = checkedCell.innerHTML; //содержимое ячейки для сортировки (td THML)
-			var wholeRow = checkedCell.parentNode; //вся строка в которой находится эта ячейка (tr)				
-				
-				if(columnsToCheckNumber == columnToCheckNumber){ //если проганяемая ячейка относится к колонке, по которой кликнули
-						if (dataType == "number") {
-							arrToSortNum.push(checkedCell);
-						} else {
-							arrToSort.push(checkedCell);							
+		for(var i = 0; i < columnsToFind.length; i++){ //through all td
+			var checkedCell = columnsToFind[i], //td in this iteration
+				columnsToCheckNumber = checkedCell.getAttribute("data-column"), //column number of this td
+				 dataType = checkedCell.getAttribute("data-type"); //data type of this td		
+
+				if(columnsToCheckNumber == columnToCheckNumber){ //if this td is in the same column as clecked td
+						if (dataType == "number") { //for data with number type
+							arrToSortNum.push(checkedCell); //write to number-array
+						} else { //fot data with no number-type
+							arrToSort.push(checkedCell);  //write to string-array					
 						}
 				}
 		}
 
-			tableToSortBody.innerHTML='';
+			tableToSortBody.innerHTML=''; //to empty table
 
-			if(arrToSortNum.length >= 1) {
-				arrToSortNum.sort(compareNumber);
-
-				for(var i = 0; i < arrToSortNum.length; i++) {
-		 			tableToSortBody.appendChild(arrToSortNum[i].parentNode);
+			if(arrToSortNum.length >= 1) { //if number-array is not empty
+				arrToSortNum.sort(compareNumber); //sort as numbers
+				for(var i = 0; i < arrToSortNum.length; i++) { //for each sorted td
+		 			tableToSortBody.appendChild(arrToSortNum[i].parentNode); //write it's parent row
 		    	}
-			} else {
-				arrToSort.sort(compare);
-
-				for(var i = 0; i < arrToSort.length; i++) {
-		 			tableToSortBody.appendChild(arrToSort[i].parentNode);
+			} else { //if number-array is empty
+				arrToSort.sort(compare); //sort as strings
+				for(var i = 0; i < arrToSort.length; i++) { //for each sorted td
+		 			tableToSortBody.appendChild(arrToSort[i].parentNode); //write it's parent row
 		    	}				
 			}
 	
