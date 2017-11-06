@@ -83,7 +83,6 @@ function drawTable(data){
 		newRow.classList.add("table__row");
 		loadMessage.innerHTML = "";
 		loadMessage.classList.remove("load-message");;
-		// loadMessage.remove();  //deleting message about loading
 
 		for (var index in data[0]) {
 		  	count++;
@@ -122,117 +121,91 @@ function drawTable(data){
 					elem = element[ind];
 				if (typeof elem != "number") {
 			 		if (elem == null) {
-						column = document.createElement("div"); //start
-						column.classList.add("table__data");
-						column.setAttribute("data-column", ++count);
-						column.setAttribute("data-type", "string");
-						column.innerHTML = "no data"; 
+						buildData("string", "no data");						
 					} else if (elem.toString().indexOf("png") != -1 || elem.toString().indexOf("jpg") != -1  || elem.toString().indexOf("bmp") != -1 ) {
 							var image = document.createElement("img");
 							image.setAttribute("src", elem);
 							image.setAttribute("alt", "user-picture");
-							column = document.createElement("div");
-							column.classList.add("table__data");
-							column.setAttribute("data-column", ++count);
-							column.setAttribute("data-type", "string");
+							buildData("string", "");
 							column.appendChild(image);
 					} else {
-						column = document.createElement("div");
-						column.classList.add("table__data");
-						column.setAttribute("data-column", ++count);
-						column.setAttribute("data-type", "string");
-						column.innerHTML = elem;
+						buildData("string", elem);	
 					}					
 				} else {
-			 		if (elem == null) {
-						column = document.createElement("div");
-						column.classList.add("table__data");
-						column.setAttribute("data-column", ++count);
-						column.setAttribute("data-type", "number");
-						column.innerHTML = "no data";
-					} else if (elem.toString().indexOf("png") != -1 || elem.toString().indexOf("jpg") != -1  || elem.toString().indexOf("bmp") != -1 ) {
-						var image = document.createElement("img");
-						image.setAttribute("src", elem);
-						image.setAttribute("alt", "user-picture");
-						column = document.createElement("div");
-						column.classList.add("table__data");
-						column.setAttribute("data-column", ++count);
-						column.setAttribute("data-type", "number");
-						column.appendChild(image);
-					} else {
-						column = document.createElement("div");
-						column.classList.add("table__data");
-						column.setAttribute("data-column", ++count);
-						column.setAttribute("data-type", "number");
-						column.innerHTML = elem;
-					}					
+					buildData("number", elem);							
 				}
 				column.style.width = columnWidthPer;
 				newRow.appendChild(column);
 				tableBody.appendChild(newRow);				
 			}
+		}			
+		function buildData(type, text){
+			column = document.createElement("div");
+			column.classList.add("table__data");
+			column.setAttribute("data-column", ++count);
+			column.setAttribute("data-type", type);
+			column.innerHTML = text; 	
 		}
+	
     	addSorter();
 	}
 
-function addSorter() {
-	var tableToSort = document.getElementById('table-to-draw'), //table
-		tableToSortBody = tableToSort.querySelector(".table__body"); //tbody
+	function addSorter() {
+		var tableToSort = document.getElementById('table-to-draw'), //table
+			tableToSortBody = tableToSort.querySelector(".table__body"); //tbody
 
-	function compare(a,b) {
-	  if (a.innerHTML < b.innerHTML)
-	    return -1;
-	  if (a.innerHTML > b.innerHTML)
-	    return 1;
-	  return 0;
-	}
-
-	function compareNumber(a,b) {
-	 	return a.innerHTML - b.innerHTML
-
-	}	
-
-	tableToSort.addEventListener('click', function(e) {
-		var columnToCheck = e.target, //licked(td)
-			dataClass = columnToCheck.className, //clicked td class
-			headerClass = 'table__data table__data_header', //class to identificate th
-			columnToCheckNumber = columnToCheck.getAttribute("data-column"), //clicked td column number
-			columnsToFind = tableToSortBody.getElementsByClassName("table__data"), //all td in tbody
-			arrToSort = [],
-			arrToSortNum = [];
-
-		if (dataClass != headerClass) {
-			return;
-		} //if clicked not to th, ignore
-		
-		for(var i = 0; i < columnsToFind.length; i++){ //through all td
-			var checkedCell = columnsToFind[i], //td in this iteration
-				columnsToCheckNumber = checkedCell.getAttribute("data-column"), //column number of this td
-				 dataType = checkedCell.getAttribute("data-type"); //data type of this td		
-
-				if(columnsToCheckNumber == columnToCheckNumber){ //if this td is in the same column as clecked td
-						if (dataType == "number") { //for data with number type
-							arrToSortNum.push(checkedCell); //write to number-array
-						} else { //fot data with no number-type
-							arrToSort.push(checkedCell);  //write to string-array					
-						}
-				}
+		function compare(a,b) {
+		  if (a.innerHTML < b.innerHTML)
+		    return -1;
+		  if (a.innerHTML > b.innerHTML)
+		    return 1;
+		  return 0;
 		}
 
-			tableToSortBody.innerHTML=''; //to empty table
+		function compareNumber(a,b) {
+		 	return a.innerHTML - b.innerHTML
+		}	
 
-			if(arrToSortNum.length >= 1) { //if number-array is not empty
-				arrToSortNum.sort(compareNumber); //sort as numbers
-				for(var i = 0; i < arrToSortNum.length; i++) { //for each sorted td
-		 			tableToSortBody.appendChild(arrToSortNum[i].parentNode); //write it's parent row
-		    	}
-			} else { //if number-array is empty
-				arrToSort.sort(compare); //sort as strings
-				for(var i = 0; i < arrToSort.length; i++) { //for each sorted td
-		 			tableToSortBody.appendChild(arrToSort[i].parentNode); //write it's parent row
-		    	}				
+		tableToSort.addEventListener('click', function(e) {
+			var columnToCheck = e.target, //licked(td)
+				dataClass = columnToCheck.className, //clicked td class
+				headerClass = 'table__data table__data_header', //class to identificate th
+				columnToCheckNumber = columnToCheck.getAttribute("data-column"), //clicked td column number
+				columnsToFind = tableToSortBody.getElementsByClassName("table__data"), //all td in tbody
+				arrToSort = [],
+				arrToSortNum = [];
+
+			if (dataClass != headerClass) {
+				return;
+			} //if clicked not to th, ignore
+			
+			for(var i = 0; i < columnsToFind.length; i++){ //through all td
+				var checkedCell = columnsToFind[i], //td in this iteration
+					columnsToCheckNumber = checkedCell.getAttribute("data-column"), //column number of this td
+					 dataType = checkedCell.getAttribute("data-type"); //data type of this td		
+
+					if(columnsToCheckNumber == columnToCheckNumber){ //if this td is in the same column as clecked td
+							if (dataType == "number") { //for data with number type
+								arrToSortNum.push(checkedCell); //write to number-array
+							} else { //fot data with no number-type
+								arrToSort.push(checkedCell);  //write to string-array					
+							}
+					}
 			}
-	
-	});
 
+				tableToSortBody.innerHTML=''; //to empty table
+
+				if(arrToSortNum.length >= 1) { //if number-array is not empty
+					arrToSortNum.sort(compareNumber); //sort as numbers
+					for(var i = 0; i < arrToSortNum.length; i++) { //for each sorted td
+			 			tableToSortBody.appendChild(arrToSortNum[i].parentNode); //write it's parent row
+			    	}
+				} else { //if number-array is empty
+					arrToSort.sort(compare); //sort as strings
+					for(var i = 0; i < arrToSort.length; i++) { //for each sorted td
+			 			tableToSortBody.appendChild(arrToSort[i].parentNode); //write it's parent row
+			    	}				
+				}
+		
+		});
 }
