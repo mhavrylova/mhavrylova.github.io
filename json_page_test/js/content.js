@@ -193,8 +193,6 @@ function drawTable(data){
 					}
 			}
 
-				tableToSortBody.innerHTML=''; //to empty table
-
 				if(arrToSortNum.length >= 1) { //if number-array is not empty
 					arrToSortNum.sort(compareNumber); //sort as numbers
 					for(var i = 0; i < arrToSortNum.length; i++) { //for each sorted td
