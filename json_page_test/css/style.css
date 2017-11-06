@@ -428,7 +428,11 @@ footer {
       color: #000000;
       background-color: #a3a3a3;
       font-weight: bold;
-      cursor: pointer; }
+      cursor: pointer;
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+          -ms-flex-align: start;
+              align-items: flex-start; }
       .table__data_header:hover {
         background-color: #910000; }
 
