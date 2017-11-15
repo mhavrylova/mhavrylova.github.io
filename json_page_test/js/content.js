@@ -3,12 +3,12 @@
 
 var droppedItems = document.getElementsByClassName("navigation__item_dropdown");
 for (var i = 0; i < droppedItems.length; i++) {
-		droppedItems[i].addEventListener('mouseover', function () {
+		droppedItems[i].addEventListener("mouseover", function () {
 			this.classList.add("navigation__item_active");
 			var nestedList = this.getElementsByTagName("ul")[0];
 			nestedList.classList.add("navigation-nested_active");
 		});
-		droppedItems[i].addEventListener('mouseout', function () {
+		droppedItems[i].addEventListener("mouseout", function () {
 			this.classList.remove("navigation__item_active");
 			var nestedList = this.getElementsByTagName("ul")[0];
 			nestedList.classList.remove("navigation-nested_active");
@@ -17,7 +17,7 @@ for (var i = 0; i < droppedItems.length; i++) {
 
 var languages = document.getElementsByClassName("languagues__item");
 for (var i = 0; i < languages.length; i++) {
-		languages[i].addEventListener('click', function () {				
+		languages[i].addEventListener("click", function () {				
 			var lanEn = "languagues__item_en-active",
 				lanFr = "languagues__item_fr-active",
 				lanDen = "languagues__item_de-active",
@@ -42,7 +42,7 @@ for (var i = 0; i < accordion.length; i++) {
 		buttonAccordion = ".accordion__button",
 		closeText = "Click to close",
 		openText = "Click to open";
-		accordion[i].addEventListener('click', function () {
+		accordion[i].addEventListener("click", function () {
 			if(this.classList.contains(activeAccordion)){
 				this.classList.remove(activeAccordion);
 				this.querySelector(buttonAccordion).innerHTML = openText;
@@ -60,13 +60,13 @@ for (var i = 0; i < accordion.length; i++) {
 }
 
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'MOCK_DATA.json', true);
+xhr.open("GET", "MOCK_DATA.json", true);
 xhr.send();
 xhr.onreadystatechange = function() {
-  if (this.readyState != 4) return;
-  if (this.status != 200) {
-    alert( xhr.status + ': ' + xhr.statusText );
-	var loadMessage = document.getElementById('loading');
+  if (this.readyState !== 4) return;
+  if (this.status !== 200) {
+    alert( xhr.status + ": " + xhr.statusText );
+	var loadMessage = document.getElementById("loading");
 	loadMessage.innerHTML = "!!! Loading Error !!!";     
     return;
   	} else {
@@ -76,22 +76,23 @@ xhr.onreadystatechange = function() {
 }
 
 
-function drawTable(data){
-		var loadMessage = document.getElementById('loading'),
+function drawTable(data) {
+		var loadMessage = document.getElementById("loading"),
 			newRow = document.createElement("div"),
 			count = 0;
 		newRow.classList.add("table__row");
 		loadMessage.innerHTML = "";
 		loadMessage.classList.remove("load-message");;
 
-		for (var index in data[0]) {
+		for (var index in data[0])
+		{
 		  	count++;
 		}
 
     	var tableAll = document.getElementById("table-drow"),
 			tableWidht = tableAll.offsetWidth,
     		columnWidthPx = tableWidht/count,
-    		columnWidthPer = columnWidthPx/tableWidht*100 + '%'; //width for column according to count of columns
+    		columnWidthPer = columnWidthPx/tableWidht*100 + "%"; //width for column according to count of columns
   		count = 0;
 
 		for (var index in data[0]) {
@@ -119,10 +120,10 @@ function drawTable(data){
 			for (var ind in element) {
 				var column,
 					elem = element[ind];
-				if (typeof elem != "number") {
-			 		if (elem == null) {
+				if (typeof elem !== "number") {
+			 		if (elem === null) {
 						buildData("string", "no data");						
-					} else if (elem.toString().indexOf("png") != -1 || elem.toString().indexOf("jpg") != -1  || elem.toString().indexOf("bmp") != -1 ) {
+					} else if (elem.toString().indexOf("png") !== -1 || elem.toString().indexOf("jpg") !== -1  || elem.toString().indexOf("bmp") !== -1 ) {
 							var image = document.createElement("img");
 							image.setAttribute("src", elem);
 							image.setAttribute("alt", "user-picture");
@@ -151,7 +152,7 @@ function drawTable(data){
 	}
 
 	function addSorter() {
-		var tableToSort = document.getElementById('table-to-draw'), //table
+		var tableToSort = document.getElementById("table-to-draw"), //table
 			tableToSortBody = tableToSort.querySelector(".table__body"); //tbody
 
 		function compare(a,b) {
@@ -166,16 +167,16 @@ function drawTable(data){
 		 	return a.innerHTML - b.innerHTML
 		}	
 
-		tableToSort.addEventListener('click', function(e) {
+		tableToSort.addEventListener("click", function(e) {
 			var columnToCheck = e.target, //licked(td)
 				dataClass = columnToCheck.className, //clicked td class
-				headerClass = 'table__data table__data_header', //class to identificate th
+				headerClass = "table__data table__data_header", //class to identificate th
 				columnToCheckNumber = columnToCheck.getAttribute("data-column"), //clicked td column number
 				columnsToFind = tableToSortBody.getElementsByClassName("table__data"), //all td in tbody
 				arrToSort = [],
 				arrToSortNum = [];
 
-			if (dataClass != headerClass) {
+			if (dataClass !== headerClass) {
 				return;
 			} //if clicked not to th, ignore
 			
@@ -184,8 +185,8 @@ function drawTable(data){
 					columnsToCheckNumber = checkedCell.getAttribute("data-column"), //column number of this td
 					 dataType = checkedCell.getAttribute("data-type"); //data type of this td		
 
-					if(columnsToCheckNumber == columnToCheckNumber){ //if this td is in the same column as clecked td
-							if (dataType == "number") { //for data with number type
+					if(columnsToCheckNumber === columnToCheckNumber){ //if this td is in the same column as clecked td
+							if (dataType === "number") { //for data with number type
 								arrToSortNum.push(checkedCell); //write to number-array
 							} else { //fot data with no number-type
 								arrToSort.push(checkedCell);  //write to string-array					
@@ -196,7 +197,7 @@ function drawTable(data){
 				if(arrToSortNum.length >= 1) { //if number-array is not empty
 					arrToSortNum.sort(compareNumber); //sort as numbers
 					for(var i = 0; i < arrToSortNum.length; i++) { //for each sorted td
-			 			tableToSortBody.appendChild(arrToSortNum[i].parentNode); //write it's parent row
+			 			tableToSortBody.appendChild(arrToSortNum[i].parentNode); //write it"s parent row
 			    	}
 				} else { //if number-array is empty
 					arrToSort.sort(compare); //sort as strings
