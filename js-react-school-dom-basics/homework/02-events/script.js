@@ -16,9 +16,11 @@ function selectFolder(event) {
     } else {
         let selected = document.querySelectorAll(".is-selected");
         for (let i = 0; i < selected.length; i++) {
-            selected[i].classList.remove('is-selected');
+            if(this.className.indexOf('is-selected') < 0) {
+                selected[i].classList.remove('is-selected');
+            }
         }
-        this.classList.add('is-selected');
+        this.classList.toggle('is-selected');
     }
 }
 
